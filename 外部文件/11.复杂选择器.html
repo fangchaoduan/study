@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 父子/后代 */
+    /* 子代选择器 只能是儿子辈（>）*/
+    .first>li {
+      font-size: 20px;
+    }
+
+    /* 后代选择器 */
+    /* .first 所有的后代li（包含了儿子辈）  空格 */
+    .first li {
+      color: red;
+    }
+
+    /* 相邻兄弟 */
+    /* .fLi 下面一个兄弟，必须是li   （+） */
+    .fLi+li {
+      background-color: pink;
+    }
+
+    /* 通用兄弟 */
+    /* .fLi 下面所有的兄弟，必须是li   （~）*/
+    .fLi~li {
+      color: blue ;
+    }
+
+
+    /* 群组 逗号（和）*/
+    li,
+    p {
+      font-size: 12px
+    }
+
+    /*交集 不仅是li，还得类名为.fli */
+    li.fLi {
+      font-size: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="first">
+    <li>shang</li>
+    <li class="fLi">1111</li>
+    <p>ppppp</p>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+  </ul>
+  <ul>
+    <li>222</li>
+    <li>222</li>
+    <li>222</li>
+    <li>222</li>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS引入外部字体并使用而不依赖于用户电脑字体</title>
+    <style>
+      div {
+        font-family: "CODE2000";
+      }
+      @font-face {
+        font-family: "CODE2000";
+        src: url("./CODE2000.TTF") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .the-fang {
+        font-family: "字体名方";
+      }
+      @font-face {
+        font-family: "字体名方";
+        src: url("./NotoSansSC-Medium.otf") format("truetype");
+      }
+    </style>
+  </head>
+  <body>
+    <p>依赖于用户电脑的字体</p>
+    <a href="https://zh.fonts2u.com/"
+      >字体可来源于： fonts2u - https://zh.fonts2u.com/ 。
+      可以搜索看看允许免费商用的，不过字体质量比较低。</a
+    >
+    <div>CSS引入外部字体并使用而不依赖于用户电脑字体</div>
+    <a href="https://fonts.google.com/"
+      >字体可来源于： 谷歌字体 - https://fonts.google.com/ 。
+      里面基本上都是免费的，字体质量很高。</a
+    >
+    还有一些是我本地电脑上有的，不过不确定是否侵权。因为是朋友给我的。
+    <div class="the-fang">不过公司里的自定义字体一般都是要UI设计师给的，因为前端找的可能和设计稿不符，或者涉及到侵权导致公司被告。</div>
+  </body>
+</html>

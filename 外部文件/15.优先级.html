@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* body>p {
+      color: blue;
+    } */
+
+    /* 
+    默认值
+    继承
+    *  0
+    div: 1;
+    .box|属性|伪类：10；
+    #box : 100
+    行内式
+    !important
+    */
+
+    /* 100 */
+    #box {
+      /* color: skyblue; */
+    }
+
+    /* 同一个选择器，权重相同，下面的覆盖上面，层叠性 */
+    /* 10 */
+    .box {
+      /* color: red; */
+      /* color: blue; */
+    }
+
+    /* 100 */
+    /* #box {
+      color: blue;
+    } */
+
+    /* 1+10 */
+    /* div:hover {
+      color: skyblue;
+    } */
+
+    /* 1+1+10+1 */
+    /* li+li:hover~p {} */
+
+    /* #box {
+      width: 200px !important;
+    }
+
+    p {
+      font-size: 20px;
+      color: skyblue;
+    } */
+
+
+    /* * 和 继承 和 元素默认值 */
+
+    /* * 比默认大 */
+
+
+    div {
+      font-size: 40px;
+    }
+
+    p:hover {
+      color: blue;
+      /* 鼠标悬浮有小手 */
+      cursor: pointer;
+      /* 让用户无法选中 */
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 行内式：1000 -->
+  <div>
+    <p>1111</p>
+    <a href="">1111</a>
+  </div>
+</body>
+
+</html>

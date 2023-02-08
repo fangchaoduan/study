@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02</title>
+    <style>
+      .color2 {
+        background-color: blue;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="./link.css" /> -->
+    <link rel="stylesheet" href="./import.css" />
+    <style>
+      .color4 {
+        background-color: blue;
+      }
+    </style>
+    <style>
+      @import url("./import.css");
+      .color4 {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="color1" style="background-color: aqua">行内式</div>
+    <div class="color2">内嵌式</div>
+    <div class="color3">外链式</div>
+    <div class="color4">导入式</div>
+  </body>
+</html>

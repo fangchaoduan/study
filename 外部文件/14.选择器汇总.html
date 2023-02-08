@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* @1 所有元素都被选中 */
+    * {
+      margin: 0;
+    }
+
+    /* @2 标签选择器 */
+    ul {
+      background-color: pink;
+    }
+
+    /* @3 类选择器 */
+    .first {
+      color: blue;
+    }
+
+    .second {
+      font-size: 40px;
+    }
+
+    /* @4 id选择器 */
+    #box {
+      background-color: aquamarine;
+    }
+
+    /* @5 属性选择器 */
+    /* [class] {} */
+
+    [class="ul uu"] {
+      border: 1px solid red;
+    }
+
+    /* > 空格  + ~ , 没有符号 */
+    /* ul>li {}
+
+    ul p {}
+
+    div+ul {
+      border-color: blue;
+    }
+
+    div~ul {}
+
+    div,
+    ul {}
+
+    a:link {}
+
+    a:visited {}
+
+    a:hover {}
+
+    a:active {} */
+
+
+    /* input:focus {} */
+
+    /* .box:focus {} */
+  </style>
+</head>
+
+<body>
+  <input type="text" class="box">
+  <input type="text" class="box2">
+  <a href=""></a>
+  <div class="first second" id="box">fffff</div>
+  <p>222</p>
+  <ul class="ul uu">
+    <li class="liele first">
+      <p>2222</p>
+    </li>
+    <li class="liele2">2222</li>
+    <p>pppppp</p>
+    <li>2222</li>
+    <li>2222</li>
+    <li>2222</li>
+    <li>2222</li>
+  </ul>
+
+
+
+  <!-- .two{
+    background-color:red;
+    font-size:20px;
+  }
+  .one{
+    font-size:16px;
+  } -->
+  <!-- 所有div都有背景颜色的样式，one 字体大小是16px  two 20px -->
+  <!-- <div class="one two"></div>
+  <div class="two"></div>
+  <div class="two"></div>
+  <div class="two"></div>
+  <div class="two"></div> -->
+
+</body>
+
+</html>
