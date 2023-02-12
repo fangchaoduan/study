@@ -1,0 +1,104 @@
+/* 清除样式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+input {
+  outline: none;
+}
+
+/* 正常样式 */
+body {
+  background-color: skyblue;
+}
+.box {
+  width: 480px;
+  height: 680px;
+  box-sizing: border-box;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  margin: 60px 90px;
+  border: 1px;
+  border-radius: 12px;
+
+  padding: 50px 0 0 39px;
+}
+.box > h3 {
+  font-size: 36px;
+  color: #000;
+  padding: 0 0 4px;
+}
+.box > div {
+  font-size: 16px;
+  color: #9b9b9b;
+  margin-bottom: 70px;
+}
+.box > div > a {
+  color: #2e58ff;
+  font-size: 14px;
+}
+
+form {
+  font-size: 14px;
+  font-weight: 200;
+  color: #333;
+}
+
+.item {
+  margin-bottom: 40px;
+}
+
+form > div > label {
+  display: inline-block;
+  font-size: 14px;
+  width: 43px;
+  text-align-last: justify;
+  margin: 0 15px 0 0;
+}
+
+form > div > input {
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  padding: 10px 11px;
+  border-radius: 4px;
+}
+form > div > input::placeholder {
+  color: rgba(51, 51, 51, 0.3);
+  font-size: 12px;
+}
+form > div > input:hover {
+  border-color: #bdc2cc;
+}
+form > div > input:focus {
+  border-color: #2e58ff;
+}
+
+.item > input {
+  width: 343px;
+}
+
+.input-code {
+  width: 206px;
+  margin-right: 9px;
+}
+
+.get-code {
+  width: 126px;
+  vertical-align: top;
+}
+.get-code:hover {
+  color: #2e58ff;
+  border: 1px solid #2e58ff;
+  background-color: #fff;
+}

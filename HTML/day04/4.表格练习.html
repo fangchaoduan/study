@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>表格</title>
+    <style>
+      /* table {
+        width: 600px;
+        margin: 0 auto;
+
+        border-collapse: collapse;
+        border-spacing: 2;
+      }
+
+      th,
+      td {
+        border: 1px solid pink;
+      } */
+
+      /* table {
+        border: 1px solid #000;
+      }
+      th,
+      td {
+        border: 1px solid #000;
+      } */
+
+      /* th,
+      td {
+        padding: 5px;
+      } */
+
+      /* table {
+        border-spacing: 20px;
+      } */
+
+      /* table {
+        border-collapse: collapse;
+      } */
+      /* table {
+        width: 700px;
+        table-layout: fixed;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <table border="1" cellspacing="0"> -->
+    <!-- <table border="1"> -->
+    <!-- <table cellpadding="22"> -->
+    <!-- <table cellspacing="20"> -->
+    <!-- <table> -->
+    <!-- <table border="1">
+      <caption>
+        课程表
+      </caption>
+      <thead>
+        <tr>
+          <th colspan="2">时间日期</th>
+          <th>一</th>
+          <th>二</th>
+          <th>三</th>
+          <th>四</th>
+          <td>五</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td rowspan="2">上午</td>
+          <td>9:30-10:15</td>
+          <td>语文</td>
+          <td>语文</td>
+          <th>语文</th>
+          <td>语文</td>
+          <td>语文</td>
+        </tr>
+        <tr>
+          <td>9:30-10:15</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+        </tr>
+        <tr>
+          <td colspan="7">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td rowspan="2">下午</td>
+          <td>14:30-15:15</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+        </tr>
+        <tr>
+          <td>15:30-16:15</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+          <td>语文</td>
+        </tr>
+      </tbody>
+    </table> -->
+
+    <!-- <table border="1" style="width: 600px;table-layout: fixed;">
+      <tr>
+        <td rowspan="2">1-1</td>
+        <td>1-2</td>
+        <td>1-3</td>
+        <td>1-4</td>
+      </tr>
+      <tr>
+        <td>2-1</td>
+        <td>2-2</td>
+        <td>2-3</td>
+        <td>2-4</td>
+        <td>2-5</td>
+      </tr>
+      <tr>
+        <td>3-1</td>
+        <td colspan="3">3-2</td>
+        <td>3-3</td>
+        <td>3-4</td>
+        <td>3-5</td>
+        <td>3-6</td>
+      </tr>
+    </table> -->
+
+    <table border="1" style="width: 600px;table-layout: fixed;">
+      <tr>
+        <td>1-1</td>
+        <td rowspan="3" style="background-color: skyblue;color: red;">1-2向下跨行，总三行。如果下方是一个单元格的初始开头，那么下方单元格就会向后移动。如果下方不是一个单元格的初始开头，那么下方单元格就不会向后移动，并且该单元格位于下方单元格图层的下方。</td>
+        <td>1-3</td>
+        <td>1-4</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="background-color: pink;color: yellow;">2-12-1向右跨列，总四列，这个会优先显示。</td>
+        <td>2-2</td>
+        <td>2-3</td>
+        <td>2-4</td>
+        <td>2-5</td>
+      </tr>
+      <tr>
+        <td>3-1</td>
+        <td>3-2</td>
+        <td>3-3</td>
+        <td>3-4</td>
+        <td>3-5</td>
+        <td>3-6</td>
+      </tr>
+    </table>
+  </body>
+</html>

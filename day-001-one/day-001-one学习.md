@@ -13,14 +13,26 @@
 上午9:30 到 13:00;下午15:00 到 18:00  
 晚自习：19:00 到 20:30(强制性上晚自习，晚自习不讲课，主要是课程辅导，练习作业/面试题/随堂小练习)  
 
-## 下载
+## 开始准备工作
+
+### 笔记
+
+Markdown: 用VSCode，教程用<https://www.runoob.com/markdown/md-table.html>。
+
+- 个人推荐这个，配合[github.dev](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)。
+  - 基本上和本地Markdown差不多，而md文档又可以本地配合github使用，还可以在csdn及稀土掘金之类的使用，更可以自己建个人博客。
+  - 至于图片，放在该md文档的同一个目录下，都用相对路径来取，方便后来人复制并且打包带走。
+
+印象笔记-马克飞象： <https://maxiang.io/>  可以用，相当于付费商用的Markdown
+
+语雀： <https://www.yuque.com/dashboard> 可以试着用，类似于博客吧
 
 ### 下载浏览器
 
 官网: <https://www.google.cn/intl/zh-CN/chrome/>
 不用翻墙: <http://www.downcc.com/soft/1158.html>
 
-chrome：可肉
+### 设置谷歌浏览器为默认浏览器
 
 ### 下载VSCode
 
@@ -30,60 +42,36 @@ chrome：可肉
 
 #### 下载VSCode插件
 
-汉化插件-Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code
-![Alt text](./1675653372915.png)
-
-chinese-拆溺死-中国的
-simplified-鲜扑范死-简化的
-language-亮可理死-语言
-pack-怕可-打包
-package-怕可取-打包
+VSCode汉化插件-Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code
+![VSCode汉化插件](./VSCode汉化插件.png)
 
 自动闭合标签-Auto Close Tag
-![Alt text](./1675653497268.png)
+![自动闭合标签](./自动闭合标签.png)
 
-auto-阿抖-自动的
-close-可肉死-闭合，关
-tag-泰可-标签
+自动重命名成对的标签-Auto Rename Tag，自动重命名成对的HTML/XML标签。
+![自动重命名成对的标签](./自动重命名成对的标签.png)
 
-自动-Auto Rename Tag
-![Alt text](./1675653564500.png)
-
-auto-阿抖-自动的
-rename-力念-重命名
-tag-泰可-标签
-
-打开浏览器-open in browser
-![Alt text](./1675653625493.png)
-
-open-欧本-打开
-in-in-进入，在...之内
-browser-不涝死
+打开浏览器-open in browser，可以直接右键打开html文件。
+![右键打开打开浏览器](./右键打开打开浏览器.png)
 
 小型服务器-Live Server-和open in browser差不多,不过它可以实时更新对应的html
-![Alt text](./1675653673089.png)
+![小型服务器](./小型服务器.png)
 
-live-力伏-活着
-server-奢我-服务器
+## 基础HTML
 
-### 设置谷歌浏览器为默认浏览器
-
-### 基础HTML
-
-#### 双标签与自闭合标签
+### 双标签与自闭合标签
 
 1. HTML 标签是由尖括号包围的关键词。
-2. 成对出现的，标签中的第一个标签是开始标签，第二个标签是结束标签也叫闭合标签，如div。
-3. 只有一个的，则叫单标签，如br或img。
+2. 成对出现的，就是双标签。标签中的第一个标签是开始标签，第二个标签是结束标签也叫闭合标签，如`<div></div>`。
+3. 只有一个的，则叫单标签。如`<br/>`或`<img/>`。
 
-#### 注释标签
+### 注释标签
 
 1. html注释就是html中对某一块内容的解释，但是不会被浏览器编译。
-2. 注释的快捷键  ctrl+/  或者 ctrl+shift+/。
+    - `<!-- html注释 -->`。
+2. 注释的快捷键  `ctrl`+`/`  或者 `ctrl`+`shift`+`/`。
 
-shift-雪伏-改变
-
-#### HTML网络框架
+### HTML网页框架
 
 快捷创建网页框架-可以默写，了解里面的各个含义
 
@@ -103,124 +91,112 @@ shift-雪伏-改变
 </html>
 ```
 
-doctype-断泰啵-文档类型
-lang-亮-语言
-head-烟-头部
-meta-蔑塔-元
-title-泰抖-标题
-body-波体-主体
+### 标签规范
 
-#### 标签属性
+1. 尽量减少标签层级
+2. 双标签必须闭合。单标签用斜线闭合，并且一律统一标签结尾斜杠的书写形式。
 
-标签属性-分为内置属性和自定义属性 --> 进阶为es5标准的自定义组件（Web Components）。
+### 标签属性
 
-web-外扑-网络
-components-可波妮死-组件
+标签属性-分为内置属性和自定义属性 --> 进阶为es5标准的自定义组件`Web Components`。
 
 - 内置属性是自带的，里面可以设置各种功能。
 - 自定义属性是自己写的，一般只用于记录一些数据。
 
 结构说明
 
-- lang=“en”  : 键值对。
-- lang : 属性名/key/键。
-- "en" : 属性值/value/值。
-
-### 笔记
-
-印象笔记-马克飞象： <https://maxiang.io/>  个人主要用这个
-
-语雀： <https://www.yuque.com/dashboard> 可以试着用这个
-
-Markdown: 用VSCode，教程用<https://www.runoob.com/markdown/md-table.html>
-
-### 标签
+- `lang="en"`  : `键值对`。
+- `lang` : `属性名`/`key`/`键`。
+- `"en"` : `属性值`/`value`/`值`。
 
 ### 标签关系
 
-嵌套关系、父子关系
+- 嵌套关系、父子关系
+  - 实际上就是包含关系，标签A位于闭合标签
 
 并列关系、兄弟关系
 
-#### 常用标签
+## 常见标签
 
-1. p段落标签，用于段落，段落有间隔，一般用于显示。样式其实也可以都只用div。
-2. h1到h2标题标签，一般仅标题和logo用，一般也只用到h1到h3。
-3. br换行标签，一般在div或p标签内部用于换行时用。
-4. hr分割线标签，一般在div与p标签之间用。
-5. img图片标签。
-      - src，图片的地址。
-      - alt，图片加载失败后显示的文本。
-      - title，移动到图片上提示的图片标签文字。
+### 常用标签
+
+1. `<p></p>`段落标签，用于段落，段落有间隔，一般用于显示。样式其实也可以都只用div。
+2. `<h1></h1>`到`<h6></h6>`标题标签，一般仅`标题`和`logo`用，一般也只用到`<h1></h1>`到`<h3></h3>`。
+3. `<br/>`换行标签，一般在`<div></div`>或`<p></p>`标签内部用于换行时用。
+4. `<hr/>`分割线标签，一般在`<div></div`>与`<p></p>`标签之间用。
+5. `<img/>`图片标签。
+      - `src`，图片的地址。
+      - `alt`，图片加载失败后显示的文本。
+      - `title`，移动到图片上提示的图片标签文字。
 
       ```html
       <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="网络失败后显示的文本" title="移动到图片上提示的标题">
       ```
 
-    alt-欧可-替换键
-    title-泰抖-标题
+6. `<a></a>`超链接标签
 
-6. a超链接标签
-
-    - href="本地或线上文档地址#锚点标签id名"  : 就直接可以跳转到想要的地方。
-    - target="链接打开的窗口" : 控制所点击链接打开的新窗口位置。
-        - target="_self" : 默认，在当前窗口上打开链接。
-        - target="_blank" : 默认，在新的空白窗口上打开新链接。
+    - `href="本地或线上文档地址#锚点标签id名"`  : 就直接可以跳转到想要的地方。
+    - `target="链接打开的窗口"` : 控制所点击链接打开的新窗口位置。
+        - `target="_self"` : 默认，在当前窗口上打开链接。
+        - `target="_blank"` : 在新的空白窗口上打开新链接。
 
     ```html
-        <a href="https://www.baidu.com">跳转到外部链接</a>
-        <a href="./2我的第二个页面.html">跳转到内部链接</a>
-        <a href="#">重新加载本页并回到顶部</a>
-        <a href="javascript:;">占位不做操作javascript:;</a>
-        <a href="./2我的第二个页面.html#锚点标签id名顶部">锚点标签id名顶部</a>
+      <a href="https://www.baidu.com">跳转到外部链接</a>
+      <a href="./2我的第二个页面.html">跳转到内部链接</a>
+      <a href="#">重新加载本页并回到顶部</a>
+      <a href="javascript:;">占位不做操作javascript:;</a>
+      <a href="./2我的第二个页面.html#锚点标签id名顶部">锚点标签id名顶部</a>
     ```
 
-    href-鹤伏-地址
-    target-他 get-目录
-    self-哨伏-自身
-    blank-烂可-空白的
-
-7. div大盒子标签
-    div-帝伏-分区
-8. span小盒子标签
-    span-死半-间距
+7. `<div></div>`大盒子标签
+    `<div></div>`文档分区元素是一个通用型的流内容容器，在不使用CSS的情况下，其对内容或布局没有任何影响。
+8. `<span></span>`小盒子标签
+    `<span></span>`通用行内容器，并没有任何特殊语义。可以使用它来编组元素以达到某种样式意图（通过使用类或者 Id 属性），或者这些元素有着共同的属性，比如lang。
+    - 在其他语义化标签不适用的情况下再使用。
 9. 三大列表
 
-    - ol与li有序
-    - ul与li无序
-    - dl与dt类名/dd项目自定义列表
+    - `<ol></ol>`与`<li></li>`: 组成有序列表。
+    - `<ul></ul>`与`<li></li>`: 组成无序列表。
+    - `<dl></dl>`与`<dt></dt>`类名/`<dd></dd>`项目: 组成自定义列表。
 
 10. 格式化标签
 
-    - strong加粗标签
-    - b加粗标签
-    - em斜体标签
-    - i斜体标签
-    - del删除线
-    - s删除线
-    - ins下划线
-    - u下划线
+    - `<strong></strong>`加粗标签
+    - `<b></b>`加粗标签
+    - `<em></em>`斜体标签
+    - `<i></i>`斜体标签
+    - `<del></del>`删除线
+    - `<s></s>`删除线
+    - `<ins></ins>`下划线
+    - `<u></u>`下划线
 
-    strong-死壮-强壮的
-    ins-in 死-插入键
+11. `<pre></pre>`预格式化标签
 
-11. pre预格式化标签
+    `<pre></pre>`标签是按照预定设置好的格式进行显示。
+      - 在页面显示时与源代码的一样，而不会压缩或忽略源码中的空格及换行。
 
-    pre-P伏-展示
+          ```html
+            <pre>
+                00000000     000000000
+              000000000000  000000000000
+
+            0000000000000000000000000000
+            0000000000000000000000000000
+            0000000000000000000000000000
+              000000000000000000000000
+                00000000000000000000
+                  0000000000000000
+                    000000000000
+                      00000000
+                        0000
+            </pre>
+          ```
 
 12. iframe内联框架标签
 
     - frameborder="0"为无边框。frameborder="1"为有边框。
     - width="300" 宽，单位px。
     - height="300" 高，单位px。
-
-    iframe-I伏琳-框架
-
-## HTML实体字符与实体编号
-
-|  含义   |   实体字符   |   实体编号  |
-| ----- | ------ | ------ |
-|    空格   |   &npsp;   |   实体编号  |
 
 ## 元素类型
 
@@ -242,18 +218,29 @@ Markdown: 用VSCode，教程用<https://www.runoob.com/markdown/md-table.html>
     - 独占一行
     - 能设置宽高
 
+## HTML实体字符与实体编号
+
+| 含义 | 实体字符 | 实体编号 |
+| ----- | ------ | ------ |
+| `空格` | `&npsp;` | `&#160;` |
+
 ## 补充
 
 ### 2023年前端常用的IDE（编辑工具）
 
-Visual Studio Code: <https://code.visualstudio.com/（推荐使用>）
+2023年推荐使用`VSCode`--即`Visual Studio Code`，大多数前端都用。
+`Webstorm`可以试着用，功能强大，但要收费。
+`HBuilder`写移动端多端用`uniApp框架`时推荐用。
+`Sublime Text`则是轻便型记事本，功能较`VSCode`差，但胜在轻便和小巧，美观。
 
-Webstorm: <http://www.jetbrains.com/webstorm/>
-
-HBuilder : <http://www.dcloud.io/>
-
-Sublime Text : <http://www.sublimetext.com/>
+1. Visual Studio Code: <https://code.visualstudio.com/>
+2. Webstorm: <http://www.jetbrains.com/webstorm/>
+3. HBuilder : <http://www.dcloud.io/>
+4. Sublime Text : <http://www.sublimetext.com/>
 
 ## 参考
 
-1. [原生js也可以自定义组件](https://www.cnblogs.com/yuwenxiang/p/14345325.html)
+1. [最适合程序员的笔记软件](https://www.ruanyifeng.com/blog/2021/08/best-note-taking-software-for-programmers.html)
+2. [原生js也可以自定义组件](https://www.cnblogs.com/yuwenxiang/p/14345325.html)
+3. [深入理解Web Components](https://blog.csdn.net/qwe435541908/article/details/117133943)
+4. [Web Components-MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebComponents浏览器原生组件</title>
+  </head>
+  <body>
+    <my-web-component fang="test">内部元素</my-web-component>
+  </body>
+
+  <script>
+    //初始化自定义组件的值。
+    class MyWebComponent extends HTMLElement {
+      constructor() {
+        super();
+
+        this.组件自定义变量 = "初始值";
+        console.log("在自定义组件整个生命周期中只会被触发一次。", this);
+
+        this.num = 0;
+        //监听事件，并修改自定义事件。实际上可以创建生命周期函数。
+        this.addEventListener("click", () => {
+          this.num++;
+          console.log(this.num);
+        });
+      }
+
+      connectedCallback(event) {
+        console.log("组件被加到DOM上或在节点树中移动时触发。", event);
+      }
+      disconnectedCallback(event) {
+        console.log("当组件被从DOM上移除时触发。", event);
+      }
+      adoptedCallback(event) {
+        console.log("组件被document.adoptNode()移动到新文档时触发", event);
+      }
+      attributeChangedCallback(name, oldValue, newValue) {
+        console.log("当组件的attribute改变时触发", name, oldValue, newValue);
+      }
+
+      observedAttributes(value) {
+        console.log("observedAttributes()，在这里返回自定义元素的属性", value);
+        console.log("this.组件自定义变量--->", this.组件自定义变量);
+        return ["fang"];
+      }
+
+      get fang() {
+        console.log(value, "get fang()", this.组件自定义变量);
+        this.getAttribute("fang") || "";
+      }
+      set fang(value) {
+        console.log(value, "get fang()", this.组件自定义变量);
+        this.组件自定义变量 = "初始值" + value;
+        this.setAttribute("fang", value);
+      }
+    }
+
+    //注册自定义组件;
+    window.customElements.define("my-web-component", MyWebComponent);
+  </script>
+</html>

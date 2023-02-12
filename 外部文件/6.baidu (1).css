@@ -1,0 +1,113 @@
+/* 清除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  background-color: pink;
+}
+
+/* ----container样式开始----- */
+.container {
+  width: 480px;
+  height: 640px;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 12px;
+  margin: 50px 100px;
+  overflow: hidden;
+  padding-left: 39px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 4px;
+  margin-top: 50px;
+}
+
+.container>p {
+  font-size: 14px;
+  color: #9b9b9b;
+  margin-bottom: 70px;
+}
+
+.login {
+  color: #2e58ff;
+}
+
+/* -----form样式开始------ */
+form>div {
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+form>div>input {
+  height: 40px;
+  border: none;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+}
+
+form>div>input:hover {
+  border-color: #bdc2cc;
+}
+
+/* #2e58ff */
+form>div>input:focus {
+  border-color: #2e58ff;
+}
+
+form>div>span {
+  margin-right: 15px;
+  display: inline-block;
+  width: 43px;
+  text-align-last: justify;
+}
+
+.item input {
+  width: 343px;
+  padding: 11px 10px;
+  box-sizing: border-box;
+}
+
+.lastItem .codeInp {
+  width: 206px;
+  padding: 11px 10px;
+  box-sizing: border-box;
+}
+
+.lastItem .getCodeInp {
+  width: 126px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  vertical-align: top;
+  background-color: #fff;
+  color: #333;
+  font-size: 12px;
+}
+.getCodeInp:hover{
+  color: #2E58FF;
+  border: 1px solid #2E58FF;
+  cursor: pointer;
+}
+
+/* -----form样式结束------ */
+
+/* ----container样式结束----- */

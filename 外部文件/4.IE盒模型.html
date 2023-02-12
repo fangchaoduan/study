@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    css 标准盒子模型：
+      + content：内容区（宽高）
+      + padding:内填充  内容到边框的距离
+      + border:边框
+      + margin：外边距 元素和元素（兄弟）一般用margin
+    */
+
+    /* 
+    IE/怪异盒模型：
+      + content：不再是width
+      + padding:内填充  内容到边框的距离
+      + border:边框
+      + margin：外边距 元素和元素（兄弟）一般用margin
+    width:content+padding+border
+    */
+
+    div{
+      /* 标准 */
+      /* box-sizing: content-box; */
+      /* IE */
+      box-sizing: border-box;
+
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      padding: 20px;
+      border: 10px solid red;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <!--  -->
+  <div></div>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+{
+  "说明": "这个文件是对vsCode插件markdownlint的配置文档，用于定义mardown提示规则",
+  "default": true,
+  "MD033": {
+    "allowed_elements": ["style", "img"]
+  }
+}
