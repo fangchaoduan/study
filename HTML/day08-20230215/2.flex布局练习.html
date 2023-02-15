@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>flex布局练习</title>
+    <style>
+      .box {
+        border: 1px solid red;
+        width: 880px;
+        height: 700px;
+
+        display: flex;
+        flex-direction: row; /* 主轴排列方向 */
+        flex-wrap: wrap; /* 主轴换行方式 */
+        /* flex-flow: row nowrap; //flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。 */
+        justify-content: center; /* 主轴对齐方式 */
+        align-items: stretch; /* */ /* 单个主轴上的项目在侧轴上如何对齐，实际上就是单行内容在垂直方向上如果对齐 */
+        /* align-content: stretch; */ /* 多个主轴在侧轴上如何对齐，实际上就是主轴与主轴之间如何排列。 */
+      }
+
+      .item {
+        width: 200px;
+        height: 200px;
+      }
+
+      .item1 {
+        background-color: aqua;
+      }
+      .item2 {
+        background-color: blue;
+      }
+      .item3 {
+        background-color: red;
+      }
+      .item4 {
+        background-color: green;
+      }
+      .item5 {
+        background-color: greenyellow;
+      }
+      .item6 {
+        background-color: pink;
+        height: 210px;
+      }
+      .item7 {
+        background-color: skyblue;
+      }
+      .item8 {
+        background-color: brown;
+      }
+      .item9 {
+        background-color: aquamarine;
+      }
+      .item10 {
+        background-color: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item item1">第1项</div>
+      <div class="item item2">第2项</div>
+      <div class="item item3">第3项</div>
+      <div class="item item4">第4项</div>
+      <div class="item item5">第5项</div>
+      <div class="item item6">第6项</div>
+      <div class="item item7">第7项</div>
+      <div class="item item8">第8项</div>
+      <div class="item item9">第9项</div>
+      <div class="item item10">第10项</div>
+    </div>
+  </body>
+</html>

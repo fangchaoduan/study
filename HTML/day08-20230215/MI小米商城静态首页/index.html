@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>小米商城静态首页</title>
+    <!-- 重置要第一个引入 -->
+    <link rel="stylesheet" href="./css/reset.min.css" />
+    <link
+      rel="stylesheet"
+      href="http://at.alicdn.com/t/c/font_3894850_i40ougkdblp.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- 一般根节点以#app开始，一般容器用wrap结尾。
+  一般做一个居中的类名，用于页面居中。 -->
+    <div id="app">
+      <!-- 顶部容器 -->
+      <div class="top-wrap">
+        <div class="center-content float-fix">
+          <ul class="left-navigation">
+            <li><a href="">小米官网</a></li>
+            <li><a href="">小米商城</a></li>
+            <li><a href="">MIUI</a></li>
+            <li><a href="">IoT</a></li>
+            <li><a href="">去服务</a></li>
+            <li><a href="">天星数科</a></li>
+            <li><a href="">有品</a></li>
+            <li><a href="">小爱开放平台</a></li>
+            <li><a href="">企业团购</a></li>
+            <li><a href="">资质证照</a></li>
+            <li><a href="">协议规则</a></li>
+            <li class="code-container">
+              <a href="">下载app</a>
+              <div class="app-wrap">
+                <img
+                  src="https://i1.mifile.cn/f/i/17/appdownload/download.png?1"
+                />
+                小米商城APP
+              </div>
+            </li>
+            <li><a href=""> Select Location</a></li>
+          </ul>
+
+          <ul class="right-navigation">
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href="">消息通知</a></li>
+            <li class="shopping-card">
+              <a href="" class="iconfont icon-gouwuche shopping-font">
+                购物车(20)
+              </a>
+              <div class="shopping">购物车中还没有商品，赶紧选购吧！</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 首屏容器 -->
+      <div class="first-screen-wrap">
+        <div class="center-content">
+          <!--  -->
+          <div class="search-content">
+            <img
+              src="http://cdn.cnbj1.fds.api.mi-img.com/mi.com-assets/shop/img/logo-mi2.png"
+              alt="小米官网"
+            />
+            <ul class="search-navigation">
+              <li>全部商品分类</li>
+              <li>Xiamomi手机</li>
+              <li>Redmi手机</li>
+              <li>电视</li>
+              <li>笔记本</li>
+              <li>平板</li>
+              <li>家电</li>
+              <li>路由器</li>
+              <li>服务中心</li>
+              <li>社区</li>
+            </ul>
+            <div class="search-input-card">
+              <input type="text" placeholder="小米手机AR2" />
+              <div class="iconfont icon-search search-icon"></div>
+              <div class="search-list">
+                <ul>
+                  <li>item 1</li>
+                  <li>item 2</li>
+                  <li>item 3</li>
+                  <li>item 4</li>
+                  <li>item 5</li>
+                  <li>item 6</li>
+                  <li>item 7</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 轮播图 -->
+          <div class="swiper-slide">
+            <img
+              src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/08a9d7eec7b055bac247b5068f817b1d.jpg?thumb=1&w=1226&h=460&f=webp&q=90"
+              alt="轮播大图"
+            />
+
+            <dl>
+              <dd>
+                <div class="describe-text">手机</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">电视</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">家电</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">笔记本 平板</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">出行 穿戴</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">耳机 音箱</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">健康 儿童</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">生活 箱包</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">智能 路由器</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+              <dd>
+                <div class="describe-text">电源 配件</div>
+                <div class="iconfont icon-gengduo more"></div>
+              </dd>
+            </dl>
+
+            <div class="swiper-previous"></div>
+            <div class="swiper-next"></div>
+
+            <ul class="dot-list">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+
+          <!-- 主推信息 -->
+          <div class="recommend-content">
+            <div class="hint-box">
+              <a href="">
+                <img
+                  src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48"
+                  alt=""
+                />
+                <span>保障服务</span>
+              </a>
+
+              <a href="">
+                <img
+                  src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48"
+                  alt=""
+                />
+                <span>保障服务</span>
+              </a>
+              <a href="">
+                <img
+                  src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48"
+                  alt=""
+                />
+                <span>保障服务</span>
+              </a>
+              <a href="">
+                <img
+                  src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48"
+                  alt=""
+                />
+                <span>保障服务</span>
+              </a>
+              <a href="">
+                <img
+                  src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48"
+                  alt=""
+                />
+                <span>保障服务</span>
+              </a>
+              <a href="">
+                <img
+                  src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/82abdba456e8caaea5848a0cddce03db.png?w=48&h=48"
+                  alt=""
+                />
+                <span>保障服务</span>
+              </a>
+            </div>
+            <div class="recommend-box">
+              <img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6dd2f3e0de4e6cbba98fd3799cfa5bf7.jpg?w=632&h=340"
+              />
+              <img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6dd2f3e0de4e6cbba98fd3799cfa5bf7.jpg?w=632&h=340"
+              />
+              <img
+                src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6dd2f3e0de4e6cbba98fd3799cfa5bf7.jpg?w=632&h=340"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 页面主体内容 -->
+      <div class="phone-info-wrap">
+        <div class="center-content">主体内容容器</div>
+      </div>
+    </div>
+  </body>
+</html>

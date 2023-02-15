@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* li:nth-child(1) {
+      color: red;
+    } */
+
+    /* 偶数 */
+    /* li:nth-child(2n) {} */
+
+    /* 奇数 */
+    /* li:nth-child(2n+1) {} */
+    /* 除了...都 */
+    /* li:not(li:nth-child(1)) {} */
+
+    /* 第一个 （同类型）*/
+    li:nth-of-type(2) {
+      background-color: antiquewhite;
+    }
+
+    /* 第一个 */
+    li:first-child {
+      color: pink;
+    }
+
+    /* 顺数第一个 */
+    /* li:first-of-type {} */
+
+
+    /* 最后一个 */
+    li:last-child {
+      color: pink;
+    }
+
+    /* 倒数第一个 */
+    /* li:last-of-type {} */
+
+    /* 偶数 */
+    /* li:nth-child(even) {
+      color: blue;
+    } */
+
+    /* 奇数 */
+    /* li:nth-child(odd) {
+      color: pink;
+    } */
+
+    /* 倒数第一个 */
+    /* li:nth-last-child(1) {
+      background-color: skyblue;
+    } */
+    /* 倒是第一个 */
+    li:nth-last-of-type(1) {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <p>ppp</p>
+    <li>111</li>
+    <p>pppp</p>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <p>222</p>
+  </ul>
+</body>
+
+</html>

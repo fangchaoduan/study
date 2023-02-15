@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer {
+      width: 700px;
+      height: 800px;
+      border: 10px solid lightcoral;
+      display: flex;
+
+      /* 容器属性 */
+      /* 水平是主轴，从左往右排列 */
+      /* flex-direction: row; */
+      /* 水平还是主轴，只是从右往左排列 */
+      /* flex-direction: row-reverse; */
+      /* 垂直方向是主轴，从上往下排列 */
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+
+      /* 是否换行：容器放不下所有项目 */
+      /* flex-wrap: nowrap;
+      flex-wrap: wrap; */
+
+      /* 复合属性 flex-direction+flex-wrap */
+      /* flex-flow: column wrap; */
+
+      justify-content: flex-start;
+      justify-content: flex-end;
+      justify-content: center;
+      justify-content: space-between;
+      justify-content: space-around;
+      justify-content: space-evenly;
+
+
+      align-items: center;
+      align-items: flex-start;
+      align-items: flex-end;
+      align-items: stretch;
+    }
+
+    .outer>div {
+      width: 200px;
+      /* height: 200px; */
+    }
+
+    .inner1 {
+      background-color: blueviolet;
+    }
+
+    .inner2 {
+      background-color: rgb(229, 156, 38);
+    }
+
+    .inner3 {
+      background-color: rgb(17, 128, 54);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="inner1">111</div>
+    <div class="inner2">222</div>
+    <div class="inner3">333</div>
+  </div>
+</body>
+
+</html>

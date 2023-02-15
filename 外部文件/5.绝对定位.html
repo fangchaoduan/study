@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .top {
+      width: 300px;
+      /* 开启绝对定位后，宽度百分比，根据参照物来定 */
+      /* width: 100%; */
+      height: 300px;
+      background-color: pink;
+      /* 脱流的 */
+      /* position: absolute; */
+      /* left: 100px; */
+      /* top: 100px; */
+      /* bottom: 100px; */
+
+      /* @1 参照物必须跟它时包含关系 */
+      /* @2 寻找离它最近的开了定位的嵌套元素 */
+      /* @3 一直找，直到找到body都没有定位元素，参照物就是视口*/
+      /* @4 一般设置参照物时开启的是相对定位（relative） */
+    }
+
+    .bottom {
+      /* width: 300px; */
+      height: 300px;
+      background-color: skyblue;
+      /* position: relative; */
+      width: 100%;
+    }
+
+    .wrap {
+      width: 1000px;
+      height: 700px;
+      border: 10px solid lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+</body>
+
+</html>

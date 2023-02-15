@@ -1,0 +1,104 @@
+.center-content {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.top-wrap {
+  background-color: #333;
+}
+.top-wrap > .center-content {
+  height: 40px;
+  position: relative;
+}
+.float-fix::after{
+  content: '';
+  display: block;
+  width: 0;
+  clear: both;
+}
+
+
+.top-wrap li,
+.left-navigation {
+  float: left;
+}
+
+.top-wrap li {
+  line-height: 40px;
+}
+
+.right-navigation {
+  float: right;
+}
+
+.top-wrap li a {
+  color: #b0b0b0;
+}
+.top-wrap li a:hover {
+  color: #fff;
+}
+
+.left-navigation > li:not(li:last-child)::after {
+  content: "|";
+  margin: 0 3.6px;
+  color: #424242;
+}
+
+.right-navigation > li:nth-child(1)::after,
+.right-navigation > li:nth-child(2)::after {
+  content: "|";
+}
+
+.right-navigation > li:nth-child(1) > a,
+.right-navigation > li:nth-child(2) > a {
+  padding: 0 5px;
+}
+.right-navigation > li:nth-child(3) > a {
+  padding: 0 10px;
+}
+
+.right-navigation > li:last-child {
+  margin-left: 15px;
+  width: 120px;
+  background-color: #424242;
+  text-align: center;
+}
+.right-navigation > li:last-child > a {
+  display: inline-block;
+  font-size: 12px;
+  width: 100%;
+  height: 40px;
+}
+.right-navigation > li:last-child:hover > a {
+  background-color: #fff;
+  color: #ff6700;
+}
+
+.shopping{
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 316px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  display: none;
+  background-color: #fff;
+}
+.right-navigation > li:last-child:hover >.shopping{
+  display: block;
+}
+
+/* 首屏内容 */
+
+.first-screen-wrap > .center-content {
+  height: 770px;
+  background-color: skyblue;
+}
+
+/* 主体内容 */
+
+.phone-info-wrap > .center-content {
+  height: 5888px;
+  background-color: yellow;
+}

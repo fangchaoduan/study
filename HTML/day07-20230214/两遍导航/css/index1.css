@@ -1,0 +1,105 @@
+.conter-content {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.top-wrap {
+  background-color: #333;
+}
+.top-wrap > .conter-content {
+  /* background-color: pink; */
+  /* overflow: hidden; */
+  position: relative;
+}
+.folat-fix::after {
+  content: "";
+  display: block;
+  width: 0px;
+  clear: both;
+}
+.left-nav {
+  float: left;
+}
+
+.top-wrap li {
+  display: inline-block;
+}
+.top-wrap li > a {
+  color: #b0b0b0;
+  line-height: 40px;
+}
+.top-wrap li > a:hover {
+  color: #fff;
+}
+
+.left-nav > li:not(li:last-child)::after {
+  content: "|";
+  margin: 0 3.6px;
+  color: #424242;
+}
+
+.right-nav {
+  float: right;
+}
+.right-nav > li:nth-child(1)::after,
+.right-nav > li:nth-child(2)::after {
+  content: "|";
+  color: #424242;
+}
+.right-nav > li:nth-child(1) > a,
+.right-nav > li:nth-child(2) > a {
+  margin: 0 5px;
+}
+.right-nav > li:nth-child(3) > a {
+  margin: 0 10px;
+}
+.right-nav > li:last-child {
+  margin-left: 15px;
+  width: 120px;
+}
+.right-nav > li:last-child > a {
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  background-color: #424242;
+  text-align: center;
+}
+.right-nav > li:last-child > a:hover,
+.right-nav > li:last-child:hover > a {
+  color: #ff6700;
+  background-color: #fff;
+}
+.shopping {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 316px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #fff;
+  text-align: center;
+  display: none;
+}
+.right-nav > li:last-child:hover > .shopping {
+  display: block;
+}
+
+/* ------ */
+
+.first-screen-wrap {
+  background-color: #fff;
+}
+.first-screen-wrap > .conter-content {
+  height: 770px;
+  background-color: aquamarine;
+}
+
+/* ----------- */
+
+.phone-wrap {
+  background-color: skyblue;
+}
+.phone-wrap > .conter-content {
+  height: 6000px;
+  background-color: skyblue;
+}

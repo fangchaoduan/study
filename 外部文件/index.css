@@ -1,0 +1,31 @@
+/* 所有的居中代码 */
+.centerCon {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.topWrap {
+  height: 40px;
+  background-color: #333;
+}
+.topWrap > .centerCon {
+  height: 40px;
+  background-color: pink;
+}
+
+/* 首屏内容 */
+.first-screen-wrap {
+  background-color: #fff;
+}
+.firstScreenWrap > .centerCon {
+  height: 670px;
+  background-color: antiquewhite;
+}
+
+.phone-info-wrap {
+  background-color: #f5f5f5;
+}
+.phoneInfoWrap > .centerCon {
+  height: 2000px;
+  background-color: cadetblue;
+}

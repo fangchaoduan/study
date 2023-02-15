@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>position定位</title>
+    <style>
+      body {
+        background-color: skyblue;
+      }
+      .block-box {
+        display: inline-block;
+        width: 1000px;
+        height: 1000px;
+        border: 1px solid rgb(255,255,0);
+      }
+
+      .block-box1{
+        position: relative;
+      }
+
+      .top-block {
+        /* width: 200px; */
+        width: 50%;
+        height: 200px;
+        background-color: pink;
+        position: absolute;
+        top: 50px;
+        bottom: 100px;
+        left: 150px;
+        right: 200px;
+      }
+
+      .top-block-child{
+        width: 100%;
+        position: absolute;
+        background-color: blue;
+        top: 60px;
+      }
+
+      .bottom-block {
+        width: 200px;
+        height: 200px;
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block-box block-box1">
+      <span>这个父级元素block-box1内部文本</span>
+      <div class="top-block">绝对定位top-block块
+        <div class="top-block-child">绝对定位内部小block块元素</div>
+      </div>
+      <div class="bottom-block">正常文档流bottom-block块</div>
+    </div>
+    <div class="block-box block-box2">这个是父级元素2</div>
+  </body>
+</html>

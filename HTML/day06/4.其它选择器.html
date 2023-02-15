@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>选择器</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+
+      ul > li:nth-child(1) {
+        color: red;
+      }
+      ul > li:nth-child(4) {
+        color: skyblue;
+      }
+
+      ul {
+        width: 1230px;
+        border: 1px solid #f0f;
+
+        overflow: hidden;
+      }
+
+      ul > li {
+        width: 300px;
+        height: 300px;
+        float: left;
+        margin-left: 10px;
+        background-color: aqua;
+        margin-bottom: 10px;
+      }
+      ul>li:nth-child(4n+1){
+        margin-left: 0px;
+      }
+
+      ul > li:nth-child(4n + 1) {
+        background-color: pink;
+      }
+
+      ul>li:not(li:nth-child(4n+2),li:nth-child(4n+3)){
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <!-- <p>p标签</p> -->
+      <li>第1个li，第2项</li>
+      <li>第2个li，第3项</li>
+      <li>第3个li，第4项</li>
+      <li>第4个li，第5项</li>
+      <li>第5个li，第6项</li>
+      <li>第6个li，第7项</li>
+      <li>第7个li，第8项</li>
+      <li>第8个li，第9项</li>
+      <li>第9个li，第10项</li>
+      <li>第10个li，第11项</li>
+      <li>第11个li，第12项</li>
+      <li>第12个li，第13项</li>
+      <li>第13个li，第14项</li>
+      <li>第14个li，第15项</li>
+      <li>第15个li，第16项</li>
+      <li>第16个li，第17项</li>
+    </ul>
+  </body>
+</html>

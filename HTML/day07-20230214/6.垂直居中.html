@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>垂直居中</title>
+    <style>
+      .box {
+        height: 700px;
+        border: 1px solid rgb(255, 255, 0);
+        position: relative;
+      }
+
+      .item {
+        background-color: skyblue;
+        height: 100px;/* 必须 */
+        width: 100px;/* 必须 */
+
+        position: absolute;left: 50%; top: 50%;
+        margin-left: 50px;/* 由自身的一半width计算得来 */
+        margin-top: 50px;/* 由自身的一半height计算得来 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      父级元素
+      <div class="item">元素自身</div>
+    </div>
+  </body>
+</html>

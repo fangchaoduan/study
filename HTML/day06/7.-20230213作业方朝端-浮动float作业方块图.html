@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>浮动</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 1000px;
+        border: 20px solid #666;
+
+        font-size: 0;
+        margin: 10px auto;
+      }
+      .box > * {
+        font-size: 16px;
+      }
+
+      .float-fix::after {
+        content: "";
+        width: 0;
+        display: block;
+        clear: both;
+      }
+
+      .item {
+        float: left;
+      }
+
+      .box-left {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box float-fix">
+      <div
+        class="box-left"
+        style="width: 200px; height: 200px; background-color: pink"
+      >
+        200*200
+      </div>
+      <div
+        class="box-left"
+        style="width: 200px; height: 200px; background-color: blue"
+      >
+        200*200
+      </div>
+      <div
+        class="box-left"
+        style="width: 200px; height: 200px; background-color: yellow"
+      >
+        200*200
+      </div>
+      <div
+        class="box-left"
+        style="width: 200px; height: 200px; background-color: yellowgreen"
+      >
+        200*200
+      </div>
+      <div
+        class="box-left"
+        style="width: 200px; height: 200px; background-color: green"
+      >
+        200*200
+      </div>
+
+      <div class="box-left item float-fix" style="width: 600px">
+        <div
+          class="box-left"
+          style="width: 300px; height: 300px; background-color: red"
+        >
+          300*300
+        </div>
+        <div
+          class="box-left"
+          style="width: 300px; height: 300px; background-color: green"
+        >
+          300*300
+        </div>
+        <div
+          class="box-left"
+          style="width: 600px; height: 100px; background-color: skyblue"
+        >
+          600*100
+        </div>
+      </div>
+
+      <div class="box-left item float-fix" style="width: 400px">
+        <div
+          class="box-left"
+          style="width: 400px; height: 250px; background-color: aqua"
+        >
+          400*250
+        </div>
+        <div
+          class="box-left"
+          style="width: 400px; height: 150px; background-color: gold"
+        >
+          400*150
+        </div>
+      </div>
+
+      <div
+        class="box-left"
+        style="width: 1000px; height: 80px; background-color: brown"
+      >
+        1000*80
+      </div>
+    </div>
+  </body>
+</html>

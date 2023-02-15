@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>6.选择器汇总.html</title>
+    <style>
+      li:nth-child(5) {
+        color: aqua;
+      }
+      li:nth-child(3n + 1) {
+        color: brown;
+      }
+      li:not(li:nth-child(2n + 1))::after {
+        content: "li:not(li:nth-child(2n+1))";
+      }
+      li:nth-of-type(2)::after {
+        content: "li:nth-of-type(2)";
+      }
+
+      p:first-child::after {
+        content: "p:first-child";
+      }
+      div:last-child::after{
+        content: 'div:last-child';
+      }
+    </style>
+  </head>
+  <body>
+
+    
+    <ul>
+      <p>the 1, this is 1 p</p>
+      <p>the 2, this is 2 p</p>
+      <li>the 3, this is 1 li</li>
+      <li>the 4, this is 2 li</li>
+      <li>the 5, this is 3 li</li>
+      <li>the 6, this is 4 li</li>
+      <li>the 7, this is 5 li</li>
+      <li>the 8, this is 6 li</li>
+      <li>the 9, this is 7 li</li>
+      <li>the 10, this is 8 li</li>
+      <li>the 11, this is 9 li</li>
+      <li>the 12, this is 10 li</li>
+      <li>the 13, this is 11 li</li>
+      <li>the 14, this is 12 li</li>
+      <li>the 15, this is 13 li</li>
+      <li>the 16, this is 14 li</li>
+      <li>the 17, this is 15 li</li>
+      <li>the 18, this is 16 li</li>
+      <div>the 19, this is 1 div</div>
+      <div>the 20, this is 2 div</div>
+      <div>the 21, this is 3 div</div>
+    </ul>
+
+
+  </body>
+</html>

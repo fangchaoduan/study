@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>小米商城手机页模块</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        background-color: skyblue;
+      }
+
+      .box {
+        width: 1240px;
+        background-color: aqua;
+        font-size: 0;
+        margin: 0 auto;
+      }
+      .box > a > img {
+        width: 234px;
+      }
+
+      .box > ul {
+        width: 992px;
+        display: inline-block;
+
+        vertical-align: top;
+      }
+      .box > ul > li {
+        display: inline-block;
+        background-color: pink;
+        margin: 0 0 14px 14px;
+      }
+
+      .a-link {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 234px;
+        height: 300px;
+
+        text-align: center;
+      }
+      .a-link > img {
+        width: 160px;
+        height: 160px;
+      }
+      .title {
+        color: #333;
+        margin: 0 10px 2px;
+        font-size: 18px;
+      }
+      .desc {
+        color: #b0b0b0;
+        font-size: 14px;
+        margin: 0 10px 10px;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .price {
+        color: #ff6700;
+        font-size: 16px;
+        margin: 0 10px 14px;
+      }
+
+      .box-title {
+        font-size: 16px;
+        font-weight: 200;
+      }
+      .box-title > h2 {
+        line-height: 58px;
+      }
+      .more {
+        line-height: 58px;
+        margin-right: 16px;
+        color: #b0b0b0;
+      }
+      .more:hover {
+        color: #ff6700;
+      }
+
+      .float-fix::after {
+        content: "";
+        display: block;
+        width: 0px;
+        clear: both;
+      }
+      .float-left {
+        float: left;
+      }
+      .float-right {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box-title float-fix">
+        <h2 class="float-left">手机</h2>
+        <a class="more float-right">查看更多</a>
+      </div>
+      <a href="">
+        <img
+          src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/d91bb6cf7da0947e8a6e50e03f4daf06.jpg"
+          alt="侧图"
+        />
+      </a>
+      <ul>
+        <li>
+          <a href="" class="a-link">
+            <img
+              src="//cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212301043_9e2a889ac4d99a1bbf95aa2defda039a.png"
+              alt="item1"
+            />
+            <h3 class="title">Redmi 12C</h3>
+            <p class="desc">高性能长续航，5000万像素超清双摄</p>
+            <p class="price">699元起</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="a-link">
+            <img
+              src="//cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212301043_9e2a889ac4d99a1bbf95aa2defda039a.png"
+              alt="item1"
+            />
+            <h3 class="title">Redmi 12C</h3>
+            <p class="desc">高性能长续航，5000万像素超清双摄</p>
+            <p class="price">699元起</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="a-link">
+            <img
+              src="//cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212301043_9e2a889ac4d99a1bbf95aa2defda039a.png"
+              alt="item1"
+            />
+            <h3 class="title">Redmi 12C</h3>
+            <p class="desc">高性能长续航，5000万像素超清双摄</p>
+            <p class="price">699元起</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="a-link">
+            <img
+              src="//cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212301043_9e2a889ac4d99a1bbf95aa2defda039a.png"
+              alt="item1"
+            />
+            <h3 class="title">Redmi 12C</h3>
+            <p class="desc">高性能长续航，5000万像素超清双摄</p>
+            <p class="price">699元起</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="a-link">
+            <img
+              src="//cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212301043_9e2a889ac4d99a1bbf95aa2defda039a.png"
+              alt="item1"
+            />
+            <h3 class="title">Redmi 12C</h3>
+            <p class="desc">高性能长续航，5000万像素超清双摄</p>
+            <p class="price">699元起</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="a-link">
+            <img
+              src="//cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212301043_9e2a889ac4d99a1bbf95aa2defda039a.png"
+              alt="item1"
+            />
+            <h3 class="title">Redmi 12C</h3>
+            <p class="desc">高性能长续航，5000万像素超清双摄</p>
+            <p class="price">699元起</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="a-link">
+            <img
+              src="//cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212301043_9e2a889ac4d99a1bbf95aa2defda039a.png"
+              alt="item1"
+            />
+            <h3 class="title">Redmi 12C</h3>
+            <p class="desc">高性能长续航，5000万像素超清双摄</p>
+            <p class="price">699元起</p>
+          </a>
+        </li>
+        <li>
+          <a href="" class="a-link">
+            <img
+              src="//cdn.cnbj1.fds.api.mi-img.com/nr-pub/202212301043_9e2a889ac4d99a1bbf95aa2defda039a.png"
+              alt="item1"
+            />
+            <h3 class="title">Redmi 12C</h3>
+            <p class="desc">高性能长续航，5000万像素超清双摄</p>
+            <p class="price">699元起</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

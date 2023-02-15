@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>4.-20230214练习方朝端-小米轮播图静态</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      ol {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .swiper-slide {
+        width: 1226px;
+        background-color: pink;
+        margin: 100px auto;
+
+        position: relative;
+      }
+
+      .swiper-slide > dl {
+        width: 234px;
+        height: 460px;
+        background-color: skyblue;
+
+        position: absolute;
+        top: 0;
+      }
+
+      .previous,
+      .next {
+        width: 41px;
+        height: 69px;
+        /* background-color: antiquewhite; */
+      }
+
+      .previous {
+        position: absolute;
+        top: 50%;
+        left: 234px;
+        margin-top: -34.5px;
+        background-image: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+        background-position-x: -84px;
+      }
+      .previous:hover{
+        background-position-x: 0;
+      }
+
+      .next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -34.5px;
+        background-image: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+        background-position-x: -125px;
+      }
+      .next:hover{
+        background-position-x: -42px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-slide">
+      <img
+        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/08a9d7eec7b055bac247b5068f817b1d.jpg?thumb=1&w=1226&h=460&f=webp&q=90"
+        alt="轮播大图"
+      />
+      <dl>
+        <dd>
+        <div class="describe-text">第1项文本</div>
+        <div class="more">》</div>
+        <div class="block-box"></div>
+      </dd>
+      </dl>
+
+      <div class="previous"></div>
+      <div class="next"></div>
+    </div>
+  </body>
+</html>

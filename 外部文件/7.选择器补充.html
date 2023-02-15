@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    通配符/标签/类/属性/伪类/id/后代/子代/相邻兄弟/通用兄弟/群组/交集
+    */
+    /* 第一个必须要是li才可以 */
+    li:nth-child(1) {
+      color: red;
+    }
+
+    /* 不生效 */
+    .ele:nth-child(1) {
+      color: blue;
+    }
+
+    /* 偶数项 */
+    /* li:nth-child(2n) {
+      color: blue;
+    } */
+
+    /* 奇数项 */
+    /* li:nth-child(2n+1) {
+      color: green;
+    } */
+
+    /* 除了xxx之外，都被选中 */
+
+    /* 
+    @1 先找到所有li
+    @2 not,除了not里面的东西，其他li都选中
+    @3 除了第一个li，其他li都选中
+    */
+    li:not(li:nth-child(1)) {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>lilili</li>
+    <li class="ele">111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+  </ul>
+</body>
+
+</html>
