@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>僵尸动画</title>
+    <style>
+      div {
+        width: 200px;
+        height: 312px;
+        background-image: url(./僵尸关键帧组图.png);
+        animation: move-x 2s steps(9) 1s 3;
+      }
+      /* @keyframes move-x {
+        0% {
+          background-position: 0px;
+        }
+        100% {
+          background-position: 1800px;
+        }
+      } */
+      @keyframes move-x {
+        0% {
+          background-position: 0px;
+        }
+        100% {
+          background-position: 1800px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

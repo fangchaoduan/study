@@ -1,31 +1,19 @@
-/* 所有的居中代码 */
-.centerCon {
-  width: 1226px;
-  margin: 0 auto;
+/* 可以编译 */
+.outer {
+  width: 1000px;
+  height: 700px;
+  border: 2px solid #ccc;
 }
-
-.topWrap {
-  height: 40px;
-  background-color: #333;
+.outer .inner1 {
+  width: 100px;
+  height: 100px;
 }
-.topWrap > .centerCon {
-  height: 40px;
-  background-color: pink;
+.outer .inner1 > p {
+  background-color: blue;
 }
-
-/* 首屏内容 */
-.first-screen-wrap {
-  background-color: #fff;
+.outer .inner1:hover {
+  font-size: 40px;
 }
-.firstScreenWrap > .centerCon {
-  height: 670px;
-  background-color: antiquewhite;
-}
-
-.phone-info-wrap {
-  background-color: #f5f5f5;
-}
-.phoneInfoWrap > .centerCon {
-  height: 2000px;
-  background-color: cadetblue;
+.outer div:nth-child(3) {
+  width: 300px;
 }

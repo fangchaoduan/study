@@ -1,0 +1,13 @@
+/* 多行注释 可以被编译 */
+html {
+  background-color: red;
+}
+html body {
+  background-color: skyblue;
+}
+html body > div {
+  color: green;
+}
+html body > div:hover {
+  font-size: 40px;
+}

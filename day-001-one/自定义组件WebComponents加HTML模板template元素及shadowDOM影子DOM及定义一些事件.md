@@ -1,3 +1,13 @@
+# 自定义组件WebComponents加HTML模板template元素及shadowDOM影子DOM及定义一些事件
+
+- `Web Components` 自定义组件，可以自定义一个类似于div的元素，里面的事件可以自定义。
+- `template元素` HTML模板，可以把一堆的DOM元素放到一起。
+- `shadow DOM` 影子DOM，可以在一个元素内放置独属于自己的元素，可配合slot标签做插槽。
+  - `shadowRoot`相当于一个阉割的`document`，但它只有独立的`css作用域`而没有独立的`js作用域`。
+
+## 加了一些事件
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,7 +53,6 @@
         //监听事件，并修改自定义事件。实际上可以创建生命周期函数。
         this.addEventListener("click", () => {
           this.num++;
-          //console.log(this.num, this.innerHTML, this.shadowRoot?.innerHTML);
           console.log(this.num);
         });
 
@@ -51,10 +60,6 @@
           console.log("自定义组件私有方法", event);
         };
         //设置影子DOM
-        // const 外部HTML模版 = document.querySelector("#outTemplate"); //根据id获取组件外部的template元素。
-        // //console.log("自定义组件外部HTML模版-->", 外部HTML模版);
-        // const 内部HTML模版 = document.querySelector("#innerTemplate"); //根据获取组件内部的template元素。
-        // //console.log("自定义组件内部HTML模版-->", 内部HTML模版);
         const js写的HTML模板 = document.createDocumentFragment(); //手动创建一个template元素。
         js写的HTML模板.appendChild(document.createElement("div"));
         js写的HTML模板.querySelector("div").innerHTML = `
@@ -67,7 +72,7 @@
         影子DOM根节点open型.innerHTML = `
           <h1 onclick="console.log('点击了影子DOM中的标题',[this],[event.target],[event])">影子DOM中的标题</h1>
 
-          <p onclick="event.target.getRootNode().host.自定义组件私有方法(event)">自定义组件私有方法-影子DOM中的p元素</p>
+          <p onclick="event.target.getRootNode().host.自定义组件私有方法(event)">直接在dom中调用自定义组件私有方法-影子DOM中的p元素</p>
           <div class="slot">
             <span>默认插槽1</span>
             <slot>默认插槽slot空的默认值</slot>
@@ -89,9 +94,6 @@
           <div onclick="自定义组件私有方法(event.target,'点击了影子DOM中的div元素1')">影子DOM中的div元素1</div>
 
           <div class="last-div">影子DOM中的div元素2</div>
-
-
-          
 
           <style>
             div{border: 1px solid rgb(255,255,0);}
@@ -118,7 +120,7 @@
         this.shadowRoot
           .querySelector(".last-div")
           .addEventListener("click", 影子DOM事件方法);
-        console.log("影子DOM根节点open型-->", 影子DOM根节点open型); //想要在影子DOM上调用当前自定义组件的事件，好像只能用js来绑定。先查找到那个元素，再绑定上去。
+        console.log("影子DOM根节点open型-->", 影子DOM根节点open型);
       }
 
       自定义组件上的自定义方法(event, 说明 = "") {
@@ -159,3 +161,24 @@
     window.customElements.define("my-web-component", MyWebComponent);
   </script>
 </html>
+
+```
+
+## 参考
+
+1. [Web组件API -- 自定义组件要看](https://blog.csdn.net/weixin_46215920/article/details/121312340)
+2. [原生js也可以自定义组件](https://www.cnblogs.com/yuwenxiang/p/14345325.html)
+3. [深入理解Web Components](https://blog.csdn.net/qwe435541908/article/details/117133943)
+4. [Web Components-MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)
+5. [HTML Imports - 在当前文档中导入html文档并使用其中的一部分](https://www.cnblogs.com/zoucaitou/p/4377763.html)
+6. [利用废弃的html rel import实现页面include功能 - 就是用自定义组件来实现](https://www.zhangxinxu.com/wordpress/2021/07/html-rel-import-include/)
+7. [HTMLUnknownElement与HTML5自定义元素的故事 - 自定义组件的来源](https://www.zhangxinxu.com/wordpress/2018/03/htmlunknownelement-html5-custom-elements/)
+8. [HTMLUnknownElement - 无效的HTML元素 - MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLUnknownElement)
+9. [影子DOM v1: 自足的Web组件 - 关于一个web组件的详细讲解](https://juejin.cn/post/6870078647416553479)
+10. [`<slot>` - MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/slot)
+11. [把富文本封装在 shadow DOM 中，要注意些啥？ - shadowRoot 相当于一个阉割的 document，但它只有独立的 css 作用域而没有独立的 js 作用域](https://juejin.cn/post/6999854478778171405)
+12. [使用 shadow DOM - MDN](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/Using_shadow_DOM)
+13. [html通过模板字符串写入script标签](https://blog.csdn.net/q879936814/article/details/121161567)
+14. [原生js绑定事件的方法和dom操作](https://blog.csdn.net/weixin_58385666/article/details/126850874)
+15. [shadow DOM的介绍和使用](http://qiutianaimeili.com/html/page/2020/12/2053mnie8tf0ofe.html)
+16. [影子节点ShadowDOM  -- 自定义组件要看](https://juejin.cn/post/6844903506801852429)

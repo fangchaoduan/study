@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: lavender;
+
+        /* 2、调用动画 */
+        animation-name: run; /* 动画名称 */
+        animation-duration: 2s; /* 持续时间 ：盒子从左到右花费的时间*/
+        animation-timing-function: ease; /* 运动曲线 默认ease*/
+        animation-delay: 2s; /* 动画延迟多久开始 默认是0s */
+        animation-fill-mode: forwards; /* 是否回到起始状态 默认是backwards  在原地不回来了forwards  */
+      }
+
+      /* 其实keyframe就是慢慢改变样式的过程 */
+      @keyframes run {
+        /* 动画序列 */
+        /* 0%是动画的 开始 */
+        0% {
+          transform: translateX(0px);
+        }
+
+        /* 动画关键帧 */
+        50% {
+          transform: translateX(200px);
+        }
+
+        /* 100%是动画的结束 */
+        100% {
+          transform: translateX(400px);
+        }
+      }
+
+      div:hover {
+        animation-play-state: paused; /* 暂停动画 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div></div>
+  </body>
+</html>

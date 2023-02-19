@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>单行文本省略号</title>
+    <style>
+      .box {
+        border: 1px solid rgb(255, 255, 0);
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .multi-line {
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        border: 1px solid rgb(255, 255, 0);
+        -webkit-box-orient: vertical;
+      }
+
+      .text {
+        width: 300px;
+        position: relative;
+        
+        line-height: 1.2em;/* //line-height和height要相互配合，显示多少行就省略，就是line-height多少倍数 */
+        max-height: 3.6em;
+       
+        text-align: justify; /* // 设置文本向两侧对齐（最后一行无效） */
+        
+        overflow: hidden;/* // 溢出隐藏 */
+      }
+      .text:before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        content: "...";
+        
+        width: 1em;/* // 省略号占据一个字符的空间 */
+        
+        height: 1.2em;/* // 与text的行高实际值保持一致 */
+        
+        background-color: #fff;/* // 设置背景和所在空间一致 */
+      }
+      .text:after {
+        position: absolute;
+        right: 0;
+        content: "";
+        
+        width: 1em;/* // 和省略号宽度一致 */
+        
+        height: 1.2em;/* // 与text的行高实际值保持一致 */
+        
+        background-color: #fff;/* // 设置背景和所在空间一致 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">uy g k yy 方一天一三辊五注哪里有 kjdkja吕中</div>
+
+    <div class="multi-line">
+      方一天一三辊五5525注哪里yy方一天一三辊五注哪里有kjdkja方一天一三辊五注哪里有
+      kjdkja吕中方一天一三辊五注哪里有 kjdkja吕中y g k yy 方一天一三辊五注哪里有
+      kjdkja吕中
+    </div>
+
+    <div class="text">
+      稳外贸是稳增长的重要支撑。1月28日，春节后首个工作日召开的国务院常务会议强调，提高外贸竞争力。记者近期走访了解到，不少外贸企业订单激增，中欧班列、海铁联运运量明显增加。为保障企业出口货物时效，各部门高效组织运输服务，帮助更多出口商品“小步快跑”奔向海外。
+    </div>
+  </body>
+</html>

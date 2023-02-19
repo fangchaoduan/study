@@ -1,0 +1,22 @@
+@background-color: skyblue; //1. 定义变量。
+
+// 单行注释 不会被编译。
+/* 多行注释 可以被编译 */
+html {
+  background-color: red;
+
+  //在父选择器里直接写的选择器可以认为前面会加一个空格，即默认用的是后代选择器
+  body {
+    background-color: @background-color; //2. 直接使用css变量。
+
+    //&指的是父级;
+    //&>指的就是子代选择器。
+    & > div {
+      //&:hover写的是当前父级元素的:hover伪类。
+      &:hover {
+        font-size: 40px;
+      }
+      color: green;
+    }
+  }
+}

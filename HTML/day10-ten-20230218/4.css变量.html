@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Css变量</title>
+  <style>
+    html{
+      --bgcolor:pink;
+
+      --变量名:yellow;
+    }
+    div{
+      width: 300px;
+      height: 400px;
+      background-color: var(--bgcolor);
+      border: 10px solid var(--变量名);
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

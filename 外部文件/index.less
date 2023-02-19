@@ -1,0 +1,30 @@
+@bgcolor:blue;
+
+// 哈哈哈 我也是注释 单行注释 不会被编译
+/* 可以编译 */
+.outer {
+  width: 1000px;
+  height: 700px;
+  border: 2px solid #ccc;
+
+  .inner1 {
+    width: 100px;
+    height: 100px;
+
+    // &指的是父级
+    &>p {
+      background-color: @bgcolor;
+    }
+
+    // 错误写法
+    // .inner1>p{
+    //   background-color: pink;
+    // }
+    &:hover {
+      font-size: 40px;
+    }
+  }
+  div:nth-child(3){
+    width: 300px;
+  }
+}

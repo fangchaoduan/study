@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>动画</title>
+    <style>
+      @keyframes square-turn {
+        0% {
+          background-color: rgba(255, 0, 0, 0.5);
+          transform: translate(0, 0);
+        }
+        25% {
+          background-color: rgba(255, 255, 0, 0.75);
+          transform: translate(600px, 0);
+        }
+        50% {
+          background-color: rgba(0, 255, 255, 1);
+          transform: translate(600px, 600px);
+        }
+        75% {
+          background-color: rgba(255, 255, 0, 0.75);
+          transform: translate(0, 600px);
+        }
+        99% {
+          background-color: rgba(255, 0, 0, 0.5);
+          transform: translate(0, 0);
+        }
+        100% {
+          background-color: rgba(255, 0, 0, 0.5);
+          transform: translate(100px, 0);
+        }
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        animation-name: square-turn;
+        animation-duration: 2s;
+        background-color: blue;
+        animation-timing-function: ease;
+        animation-delay: 2s;
+        animation-iteration-count: 5;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div>22233355</div>
+  </body>
+</html>
