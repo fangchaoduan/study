@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.空格分情况显示</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      ul {
+        background-color: aqua;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      ul > li {
+        height: 200px;
+        border: 1px solid #333;
+        box-sizing: border-box;
+      }
+
+      /* 大于等于1200 的时候显示8个
+        大于等于900 小于1200的时候显示4个
+        大于等于768px 小于900的时候显示2个
+        小于768px 的时候显示一个
+
+      */
+
+      @media screen and (min-width: 1200px) {
+        ul > li {
+          width: calc(100% / 8);
+          border-width: 1px 0 1px 1px;
+        }
+      }
+
+      @media screen and (min-width: 901px) and (max-width: 1199px) {
+        ul > li {
+          width: calc(100% / 4);
+        }
+      }
+      @media screen and (min-width: 769px) and (max-width: 900px) {
+        ul > li {
+          width: calc(100% / 2);
+        }
+      }
+      @media screen and (max-width: 768px) {
+        ul > li {
+          width: calc(100% / 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+  </body>
+</html>

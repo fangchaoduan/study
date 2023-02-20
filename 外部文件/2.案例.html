@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* 
+    大于等于1200 的时候显示8个
+    大于等于900 小于1200的时候显示4个
+    大于等于768px 小于900的时候显示2个
+    小于768px 的时候显示一个
+    */
+
+    /* 在外面写 不管什么尺寸这些都会生效 */
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      border: 1px solid red;
+      box-sizing: border-box;
+      height: 60px;
+      /* float: left; */
+    }
+
+    @media screen and (min-width:1200px) {
+      li {
+        width: 12.5%;
+      }
+    }
+
+    @media screen and (min-width:900px) and (max-width:1199px) {
+      li {
+        width: 25%;
+      }
+    }
+
+    @media screen and (min-width:768px) and (max-width:899px) {
+      li {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width:767px) {
+      li {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>111</li>
+    <li>111</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+
+</html>
