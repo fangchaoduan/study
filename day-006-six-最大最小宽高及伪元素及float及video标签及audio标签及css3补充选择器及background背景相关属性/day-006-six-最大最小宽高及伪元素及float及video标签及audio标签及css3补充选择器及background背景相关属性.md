@@ -1,4 +1,4 @@
-# day-006-six-最大最小宽高及伪元素及float及video标签及audio标签及css3补充选择器及background背景相关属性
+# day-006-six-`最大最小宽高`及`伪元素`及`float`及`video标签`及`audio标签`及`css3补充选择器`及`background背景`相关属性
 
 ## 最大最小宽度与高度
 
@@ -21,21 +21,21 @@
 伪元素可以理解为虚假的元素，他们虽然会在内容元素的前后插入额外的元素，但并不会在文档中生成，在文档的源代码当中并不能够找到它们。
 
 - 伪元素虽然在结构上是虚假元素，在表现上和普通元素一样，能为它们添加任何样式。
-- 伪元素必须拥有content属性才能生效
+- 伪元素必须拥有`content属性`才能生效
 - 伪元素默认是一个行内元素，和一个`<span></span>`差不多，但可以用`display:inline-block;`改。伪元素对其他属性基本都是支持的。
 
 ### 常见伪元素
 
 - `::before`
-  - 必要属性content
+  - `必要属性content`
   - 可以看作是当前匹配选中的元素的第一个子元素。
 - `::after`
-  - 必要属性content
+  - `必要属性content`
   - 可以看作是当前匹配选中元素的最后一个子元素。
 
-## float浮动
+## `float浮动`
 
-float一开始就是用来做文字环绕效果的。
+`float`一开始就是用来做文字环绕效果的。
 
 ### 文字环绕
 
@@ -43,10 +43,10 @@ float一开始就是用来做文字环绕效果的。
 
 ```html
 <div style="width: 350px;">
-  <img src="./十字对齐240X240.png" alt="" style="float: left;"/>
-  深入理解内联元素的高度表现 在讲解原理之前，我们先看以下代码:复制代码现在我们思考这样几个问题: 元素的高度从何而来？
-  是由里面的文字撑开的？ 作者：阳光。稀土掘金
-  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+  <img src="./十字对齐240X240.png" style="float: left;"/>
+  `::before` `必要属性content` 可以看作是当前匹配选中的元素的第一个子元素。
+  `::after` `必要属性content` 可以看作是当前匹配选中元素的最后一个子元素。
+  `float`一开始就是用来做文字环绕效果的。在元素自身上设置。
 </div>
 ```
 
@@ -54,44 +54,45 @@ float一开始就是用来做文字环绕效果的。
 
 正常文档流中，宽度是可继承的，但是一旦浮动，宽度不能再继承父级的，而是由自身内容大小决定。
 
-- 普通流 才能撑开高度。
-- 左流 设置左浮动之后的元素。
-- 右流 设置右浮动之后的元素。
+- 普通流 能在内容区撑开高度。
+- 左流 设置左浮动之后的元素，不能在内容区撑开高度。
+- 右流 设置右浮动之后的元素，不能在内容区撑开高度。
 
 ### 左右浮动
 
-- left 左浮动，让元素沿着容器左侧放置
-- right 右浮动，让元素沿着容器右侧放置
-- none 不浮动
+- `left` 左浮动，让元素沿着容器左侧放置
+- `right` 右浮动，让元素沿着容器右侧放置
+- `none` 不浮动
 - 浮动后由内容撑开
 
 ### 清除浮动
 
 - 父级元素设置宽高
 - 浮动元素末尾多一个元素如`<br/>`并设置`clear:both;`;
-- 父级元素设置浮动，但父级元素也被设置浮动了，影响到父级元素的兄弟了。
+- 父级元素设置浮动。
+  - 但父级元素也被设置浮动了，会影响到父级元素的兄弟。
 - 给父级元素设置`overflow:hidden;`。
 - 给`父级元素::after`设置`content: "";display: block;width:0px;clear: both;`。
-  - 衍生出来给所有浮动元素的父级一个 clearFix的类名当一个元素需要清除浮动的时候 直接设置clearFix类名。
+  - 衍生出来给所有浮动元素的父级一个`clearFix`的类名。当一个元素需要清除浮动的时候，直接设置`clearFix`类名。
 
     ```css
-      .clearFix:after {
-        content: ""; /*  必须拥有content属性 内容为空  */
-        display: block;/*   必须块标签才能清浮动  */
-        height: 0;/* 高度为0 不占用空间 */
-        clear: both;/* 清除浮动 */
-      }
-      .clearFix {
-        *zoom: 1;/* //兼容ie */
-      }
+    .clearFix:after {
+      content: ""; /*  必须拥有content属性 内容为空  */
+      display: block;/*   必须块标签才能清浮动  */
+      height: 0;/* 高度为0 不占用空间 */
+      clear: both;/* 清除浮动 */
+    }
+    .clearFix {
+      *zoom: 1;/* //兼容ie */
+    }
     ```
 
-## bug查找
+## `bug查找`
 
 - 如果当前元素看不到，那么样式控制台里在当前元素的兄弟及父级点一点。
-  - 如果看到高度为0，那么就代表那个元素可能脱流了。
+  - 如果看到高度为0，那么就代表当前元素可能脱流了。
 
-## 其它html语义化标签
+## 其它`html语义化标签`
 
 ## `<video></video>`视频标签
 
@@ -114,14 +115,14 @@ float一开始就是用来做文字环绕效果的。
 - `muted` 设置静音。
 - `loop` 设置视频循环播放。
 
-## css3补充选择器
+## `css3补充选择器`
 
 - `:nth-child()`
   - `:nth-child(an+b)` 这个CSS伪类首先找到所有当前元素的兄弟元素，然后按照位置先后顺序从1开始排序，选择的结果为CSS伪类`:nth-child` 括号中表达式`an+b`匹配到的元素集合`n=0，1，2，3...`。
-    - `tr:nth-child(2n+1)` 表示 HTML 表格中的奇数行。
-    - `tr:nth-child(odd)` 表示 HTML 表格中的奇数行。
-    - `tr:nth-child(2n)` 表示 HTML 表格中的偶数行。
-    - `tr:nth-child(even)` 表示 HTML 表格中的偶数行。
+    - `tr:nth-child(2n+1)` 表示`HTML表格`中的奇数行。
+    - `tr:nth-child(odd)` 表示`HTML表格`中的奇数行。
+    - `tr:nth-child(2n)` 表示`HTML表格`中的偶数行。
+    - `tr:nth-child(even)` 表示`HTML表格`中的偶数行。
     - `span:nth-child(0n+1)` 表示子元素中第一个且为`<span></span>`的元素，与`:first-child`选择器作用相同。
 
         ```css
@@ -141,14 +142,14 @@ float一开始就是用来做文字环绕效果的。
         }
         ```
 
-    - E:nth-child(n)  匹配父元素的第n个子元素E，假设该子元素不是E，则选择符无效。
+    - `E:nth-child(n)`  匹配父元素的`第n个子元素-选择器E对应的元素`，假设该`子元素`不是`选择器E对应的元素`，则选择符无效。
 - `:not()` 反选伪类选择器
-  - CSS 伪类 :not() 用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为反选伪类。
+  - `CSS伪类:not()` 用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为反选伪类。
 
   ```css
   /* 
     @1 先找到所有li
-    @2 not,除了not里面的东西，其他li都选中
+    @2 not(),除了not()里面的东西，其他li都选中
     @3 除了第一个li，其他li都选中
   */
   li:not(li:nth-child(1)) {
@@ -156,18 +157,18 @@ float一开始就是用来做文字环绕效果的。
   }
   ```
 
-- E:first-child  匹配父元素的第一个子元素E。
-- E:last-child  匹配父元素的最后一个子元素E。
-- E:nth-last-child(n)  匹配父元素的倒数第n个子元素E，假设该子元素不是E，则选择符无效。
-- E:first-of-type  匹配同类型中的第一个同级兄弟元素E
-- E:nth-of-type(n)  匹配同类型中的第n个同级兄弟元素E
-- E:nth-last-of-type(n)  匹配同类型中的倒数第n个同级兄弟元素E
+- `E:first-child`  匹配父元素的`第一个`且为`选择器E对应的元素`的子元素。
+- `E:last-child`  匹配父元素的`最后一个`且为`选择器E对应的元素`的子元素。
+- `E:nth-last-child(n)`  匹配父元素的`倒数第n个`且为`选择器E对应的元素`的子元素，假设该子元素不是E，则选择符无效。
+- `E:first-of-type`  匹配父元素的`同类型子元素`中`第一个`的`选择器E对应的元素`
+- `E:nth-of-type(n)`  匹配父元素的`同类型子元素`中`第n个`的`选择器E对应的元素`
+- `E:nth-last-of-type(n)`  匹配父元素的`同类型子元素`中`倒数第n个`的`选择器E对应的元素`
 
-## background背景
+## `background背景`
 
 - `background-clip` 设置背景显示区域在那显示。
-  - `background-clip: padding-box;`
   - `background-clip: border-box;`
+  - `background-clip: padding-box;`
   - `background-clip: content-box;`
 - `background-color` 设置元素的背景色。
 - `background-image` 设置元素的背景图像，会显示在背景色的上层。
@@ -176,7 +177,7 @@ float一开始就是用来做文字环绕效果的。
   - `background-origin: border-box;`
   - `background-origin: padding-box;`
   - `background-origin: content-box;`
-- `background-position` 设置背景图片初始位置。第一个值是水平方向，第二个值是垂直方向。如果第二个值不写，就是center。
+- `background-position` 设置背景图片初始位置。第一个值是水平方向，第二个值是垂直方向。如果第二个值不写，就是`center`。
   - 一个值
     - 字符串 可选`top`、`left`、`right`、`bottom`、`center`。
     - 像素
