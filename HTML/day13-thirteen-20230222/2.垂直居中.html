@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>垂直居中</title>
+    <style>
+      div {
+        width: 600px;
+        height: 500px;
+        background-color: pink;
+
+        /* //1. 父元素设置`display: flex;align-items: center;`
+        display: flex;
+        align-items: center; */
+
+        /* //2. 父元素设置`position: relative;`，子元素设置`position: absolute;top: 50%;margin-top: calc(子元素自身高度 / -2);`
+        position: relative; */
+
+        /* //3. 父元素设置`position: relative;`，子元素设置`position: absolute;top: 50%;transform: translateY(-50%);`
+        position: relative; */
+
+        /* //4. 父元素设置`display: flex;align-items: center;` */
+
+        display: flex;
+        align-items: center;
+        
+      }
+      p {
+        --this-height: 100px;
+        width: 150px;
+        height: var(--this-height);
+        background-color: skyblue;
+
+        /* //2.
+        position: absolute;
+        top: 50%;
+        margin-top: calc(var(--this-height) / -2); */
+
+        /* //3.
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); */
+
+        /* position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0; */
+      }
+
+      h1 {
+        --the-height: 200px;
+        width: 300px;
+        height: var(--the-height);
+        background-color: yellow;
+
+        line-height: calc(var(--the-height) + 0px);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>块级元素垂直居中</p>
+    </div>
+    <h1>文本垂直居中</h1>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 700px;
+      height: 100px;
+      background-color: pink;
+      /* 文本/行内/行内块/图片 */
+      text-align: center;
+      /* position: relative; */
+
+      /* display: flex;
+      justify-content: center; */
+    }
+
+    p {
+      width: 50px;
+      height: 50px;
+      background-color: skyblue;
+      /* 固定这个块的宽度，一定要在父级有空间居中 */
+      /* margin: 0 auto; */
+      /* position: absolute; */
+      /* 相对父级 */
+      /* left: 50%; */
+      /* margin-left: -25px; */
+      /* 这个百分比相对自身 */
+      /* transform: translateX(-50%); */
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 文本/图片/行内块/块级/行内 -->
+  <div>
+    <!-- 哈哈 -->
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+
+  <!-- 
+    块级元素水平居中
+      @1 margin：0 auto;
+      @2 position + margin-left:- 自身一半
+      @3 position + transform
+      @4 flex
+   -->
+</body>
+
+</html>

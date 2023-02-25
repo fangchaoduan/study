@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>4.iconfont本地使用</title>
+    <link rel="stylesheet" href="./css/iconfont/iconfont.css" />
+    <style>
+      .实际类名::after {
+        content: "\e63f";
+      }
+
+      .自定义类名 {
+        font-family: "iconfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .自定义类名:before {
+        content: "\e63f";
+      }
+
+      
+      .自定义类方 {
+        color: red;
+        font-family: "iconfont" !important;/* 引入字体图标，用于补充Unicode */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="iconfont">unicode引入 &#xe63f; unicode引入</div>
+    <input
+      type="text"
+      placeholder="unicode引入---&#xe63f; 提示文案中使用"
+      class="iconfont"
+    />
+    <div class="iconfont 实际类名">unicode引入----用::after伪类引入</div>
+
+    <div class="iconfont icon-gouwuche">类名引入--图标类名引入</div>
+    <div class="自定义类名">自定义类名引入 </div>
+    <div class="自定义类方">自定义类名引入 &#xe63f; + unicode的组合  &nbsp;</div>
+  </body>
+</html>

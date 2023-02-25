@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>左列定宽，右列自适应</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .left {
+      width: 300px;
+      height: 100vh;
+      background-color: pink;
+      /* ==== */
+      float: left;
+    }
+    .right{
+      height: 100vh;
+      background-color: skyblue;
+      /* 开启了BFC block formatting context：块级格式化上下文  不会和浮动元素重叠 */
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="left"></div>
+  <div class="right"></div>
+</body>
+
+</html>

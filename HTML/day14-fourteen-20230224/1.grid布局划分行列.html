@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .grid布局容器 {
+        margin: 100px 0 0 100px;
+        width: 500px;
+        height: 600px;
+        border: 1px solid red;
+
+        /* display: inline-grid; */
+        display: grid;
+        /* grid-template-columns: 100px 50px 100px;
+        grid-template-rows: 200px 100px 100px 100px; */
+
+        /* grid-template-columns: 100px 30% 100px;
+        grid-template-rows: 200px 100px 100px 100px; */
+
+        /* grid-template-columns: 100px 50px 100px;
+        grid-template-rows: 200px 100px 100px 100px; */
+
+        /* grid-template-columns: 100px 30% 100px;
+        grid-template-rows: 200px repeat(4,100px); */
+
+        /* grid-template-columns: 100px 30% 100px;
+        grid-template-rows: 200px repeat(auto-fill,90px); */
+
+        /* grid-template-columns: auto 150px 100px;
+        grid-template-rows: repeat(3,100px) auto 40px; */
+
+        /* //
+        grid-template-columns: auto 150px 100px;
+        grid-template-rows: repeat(3,100px) 1fr minmax(100px,200px); */
+
+        /* //
+        grid-template-columns: auto 150px 100px;
+        grid-template-rows: repeat(3,100px) 240px minmax(100px,200px); */
+
+        /* //
+        grid-template-columns: auto 150px 100px;
+        grid-template-rows: repeat(3,100px) 40px minmax(100px,200px); */
+
+        /* //
+        grid-template-columns: auto 150px 100px;
+        grid-template-rows: repeat(3,100px) 40px minmax(100px,200px); */
+      }
+    </style>
+  </head>
+  <body>
+    <span>前</span>
+    <div class="grid布局容器"></div>
+    <span>后</span>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer {
+      font-size: 40px;
+    }
+
+    .inner {
+      font-size: 20px;
+      /* 当前字体大小的倍数 */
+      line-height: 2em;
+      /* 相对根标签字体大小的倍数 */
+      /* width: 10rem; */
+
+      /* 将视口分为100份，1vw（view width），就是视口1% */
+      /* 将视口分为100份，1vh（view height），就是视口1% */
+      width: calc(100vw - 100px);
+
+      width: 100rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+  em
+  rem
+  vw
+  vh
+ -->
+  <div class="outer">
+    <div class="inner">相对单位</div>
+  </div>
+
+  <script>
+    (function () {
+      function computed() {
+        const desginWidth = 375
+        const clientWidth = document.documentElement.clientWidth
+        const scale = clientWidth / desginWidth
+        document.documentElement.style.fontSize = `${scale}px`
+      }
+      computed();
+      window.onresize = function () {
+        computed();
+      }
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 1226px;
+        position: relative;
+        margin: 100px auto;
+      }
+      .left-box {
+        background: rgba(105, 101, 101, 0.6);
+
+        position: absolute;
+
+        width: 234px;
+        height: 460px;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+      .left-box > li {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #ccc;
+
+        display: flex;
+        justify-content: space-between;
+      }
+      .left-box > li:hover {
+        background-color: #ff6700;
+        color: #fff;
+      }
+      .left-box > li > span {
+        font-size: 14px;
+        line-height: 42px;
+      }
+
+      .the-image {
+        height: 460px;
+        width: 100%;
+        background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3b549726ae51e189b4c3eb0f672cba36.jpg?thumb=1&w=1226&h=460&f=webp&q=90);
+      }
+      .the-image:hover {
+        transition: all 1s ease-in;
+        background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0b7e5c1fd6c74380d4d6c7036490e46f.jpg?thumb=1&w=1226&h=460&f=webp&q=90);
+      }
+
+      .btn-left {
+        width: 41px;
+        height: 69px;
+
+        position: absolute;
+        left: 234px;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+        background-position: -84px 50%;
+      }
+      .btn-left:hover {
+        background-position: 0 50%;
+      }
+
+      .btn-right {
+        width: 41px;
+        height: 69px;
+
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+        background-position: -125px 50%;
+      }
+      .btn-right:hover {
+        background-position: -42px 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <ul class="left-box">
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+        <li><span class="left">手机</span><span>></span></li>
+      </ul>
+
+      <div class="the-image"></div>
+      <div class="btn-left"></div>
+      <div class="btn-right"></div>
+    </div>
+  </body>
+</html>

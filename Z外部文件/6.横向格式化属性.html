@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .outer {
+      width: 700px;
+      height: 200px;
+      background-color: skyblue;
+    }
+
+    .inner {
+      width: auto;
+      /* width: 200px; */
+      height: 100px;
+      background-color: pink;
+      /* margin-left: auto;
+      margin-right: auto; */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    1. 把margin-left和margin-right全部设为auto，width设置为具体值，这时候两个外边距的长度相等，具体表现就是元素在父元素中居中显示，也就是我们想要的水平居中效果。
+    2. margin-left margin-right width任意一个为auto，其他为具体值,设置auto的就  是父级容器剩余的宽度.
+    3. 把某一边的外边距和width设置为auto，此时设置为auto的外边距等于0，宽度根据等式计算。
+    4. 三个值都设置为auto,会将左右margin的值都为0，但是还得满足那个等式，所以值为父元素的宽度。 
+  -->
+
+  <div class="outer">
+    <div class="inner"></div>
+  </div>
+</body>
+
+</html>

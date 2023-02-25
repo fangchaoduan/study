@@ -208,3 +208,4 @@
 
 1. [:not()-MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:not)
 2. [:nth-child()-MDN文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child)
+3. [css伪元素::before和::after用法详解](https://www.cnblogs.com/wonyun/p/5807191.html)

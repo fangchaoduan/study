@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动聊天样式2-使用css计算函数calc及overflow</title>
+    <style>
+      #app {
+        background-color: skyblue;
+      }
+      .header,
+      .footer {
+        height: 100px;
+        width: 100%;
+        background-color: pink;
+      }
+      .main {
+        background-color: yellow;
+      }
+      .body-content{
+        height: 5000px;
+      }
+
+      #app {
+        height: 100vh;
+      }
+      .main {
+        height: calc(100% - 100px - 100px);
+        overflow: auto;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">头部</div>
+      <div class="main">
+        <div class="body-content">主体内容</div>
+      </div>
+      <div class="footer">尾部</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>相对单位</title>
+    <style>
+      body {
+        border-top: 1px solid red;
+        border-right: 1em solid yellow;
+        border-bottom: 1rem solid gray;
+        border-left: 1vw solid black;
+        outline: 1vh solid pink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+  em
+  rem
+  vw
+  vh
+ -->
+
+    body上的字，默认的font-size为16px
+    <div class="outer-box">
+      父元素outer-box上font-size为20px
+      <div class="inner-item">子元素inner-item上font-size为25px</div>
+    </div>
+  </body>
+</html>

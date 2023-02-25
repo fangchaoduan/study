@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>水平居中</title>
+    <style>
+      .行内非块元素水平居中 {
+        width: 700px;
+        height: 400px;
+        background-color: skyblue;
+
+        /* 文本/行内/行内块/图片 */
+        text-align: center;
+      }
+
+      .单个块元素水平居中父盒子 {
+        width: 700px;
+        height: 400px;
+        background-color: yellow;
+
+        position: relative;
+      }
+      .单个块元素 {
+        /* --the-height: 100px;
+        width: var(--the-height);
+        margin-left: calc(var(--the-height) / -2); */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="行内非块元素水平居中">
+      行内文本居中<br />
+      <img
+        src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"
+        style="height: 65px; background-color: pink"
+      /><br />
+      <span style="background-color: blue">行内元素</span><br />
+      <div
+        style="
+          display: inline-block;
+          width: 130px;
+          height: 30px;
+          background-color: gray;
+        "
+      >
+        行内块
+      </div>
+      <br />
+    </div>
+
+    <div class="单个块元素水平居中父盒子">
+      <div class="单个块元素">单个块元素水平居中</div>
+    </div>
+  </body>
+</html>

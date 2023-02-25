@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>粘性定位</title>
+  <style>
+    body {
+      height: 1500px;
+    }
+    .box {
+      width: 800px;
+      height: 90px;
+      background-color: lavenderblush;
+      margin: 0 auto;
+      margin-top: 200px;
+      /* 粘性定位 */
+      /* 以浏览器的窗口作为参照物 */
+      /* 兼容性差 IE不支持 */
+      position: sticky;
+      /* 四个方向的值必须写一个才会生效 */
+      top: 40px; /* 四个方向的值必须写一个才会生效 */
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="center">粘性定位 以浏览器的窗口作为参照物，兼容性差 IE不支持</div>
+</body>
+</html>

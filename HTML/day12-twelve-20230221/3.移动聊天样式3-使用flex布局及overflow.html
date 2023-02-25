@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动聊天样式3-使用flex布局及overflow</title>
+    <style>
+      #app {
+        background-color: skyblue;
+      }
+      .header,
+      .footer {
+        height: 100px;
+        width: 100%;
+        background-color: pink;
+      }
+      .main {
+        background-color: yellow;
+      }
+
+      #app {
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+      }
+      .main {
+        flex: 1;
+        overflow: auto;
+      }
+      .body-content {
+        height: 5000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="header">头部</div>
+      <div class="main">
+        <div class="body-content">主体内容</div>
+      </div>
+      <div class="footer">尾部</div>
+    </div>
+  </body>
+</html>
