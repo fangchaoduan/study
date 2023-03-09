@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //4. join 将数组---》字符串
+        // 有参数，
+        // 可以默认不写用","分隔
+        // 写参数  参数是什么，就用什么分隔
+        // 原来的数组，不会改变
+        // 返回结果是字符串
+        // var arr=[10,20,30];
+        // var newstr=arr.join(":");
+        // console.log(newstr);
+        // console.log(arr);
+
+
+        var arr=[10,20,30];
+        var newstr=arr.join("+");
+        //newstr => "10+20+30"
+        //eval(newstr) => eval("10+20+30") => 60
+        console.log(eval(newstr));
+         
+      //5.indexOf/ lastIndexOf 
+      // 判断数组里是否含有某项内容，含有就返回 索引下标，不含有返回-1
+      // 两个参数
+      // 第一个参数：某项内容   第二个参数：开始查找的位置 （省略，默认从0开始找）
+      // indexOf:从前往后找   lastIndexOf：从后往前找
+
+    //   var arr=[10,20,30,10]
+    // //   console.log(arr.indexOf(10));//0
+    // //   console.log(arr.indexOf(100));//-1
+
+    //   console.log(arr.indexOf(10,1));//3
+
+    // var ary=[1,2,3,4,1,55,1];
+    // ary.indexOf(1); //0
+    // ary.indexOf(1,2);//4 
+
+    //   //        0  1  2  3  4   5
+    //   var arr=[10,20,30,10,"a","b"]
+    //   console.log(arr.lastIndexOf(10));//3
+    //   console.log(arr.lastIndexOf(100));//-1
+
+    //   //从索引下标4的位置往前找
+    //   console.log(arr.lastIndexOf(10,4));//3
+
+    //   //从索引下标2的位置往前找
+    //   console.log(arr.lastIndexOf(10,2));//0
+    
+    
+      var ary=[1,2,3,4,1,55,1];
+        // 检测1这个项目在数组中最后一次出现的索引
+        console.log(ary.lastIndexOf(1));//6
+        // 检测1这个项目在数组中最后出现的索引，在索引5的位置停止检测
+        console.log(ary.lastIndexOf(1,5));//4
+
+    </script>
+</body>
+</html>

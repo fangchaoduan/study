@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrap {
+        margin: 50px auto;
+        width: 700px;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+      }
+
+      li {
+        width: 150px;
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+        border: 1px solid darkcyan;
+        margin-right: 15px;
+        font-size: 28px;
+      }
+
+      .wrap > div {
+        width: 700px;
+        height: 400px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 400px;
+        display: none;
+      }
+
+      .wrap .current {
+        display: block;
+        background-color: darkcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul>
+        <li class="current">早餐</li>
+        <li>午餐</li>
+        <li>晚餐</li>
+      </ul>
+      <div class="current">早餐</div>
+      <div>午餐</div>
+      <div>晚餐</div>
+    </div>
+  </body>
+  <script>
+    const theWrap = document.getElementsByClassName("wrap")[0];
+    const liList = theWrap.getElementsByTagName("li");
+    const divList = theWrap.getElementsByTagName("div");
+    for (let i = 0; i < liList.length; i++) {
+      liList[i].index = i;
+      liList[i].onclick = function () {
+        for (let i = 0; i < liList.length; i++) {
+          liList[i].className = "";
+          divList[i].className = "";
+        }
+        this.className = "current";
+        divList[this.index].className = "current";
+      };
+    }
+  </script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // @1 如何创建函数
+    function total(a = 100) { }//关键字、字面量
+    var total2 = function () { }//表达式
+    // @2 如何使用函数
+    total();//1.执行total函数里面的代码  2.将返回值给到函数调用之后的结果
+    // @3 函数的参数（形参和实参）
+    /* 
+    形参：声明函数时候的小括号里面的参数
+    实参：函数调用时候的小括号里面的参数
+
+    形参个数=实参个数：从左往右，一一对应
+    形参个数>实参个数：从左往右，一一对应,多出的形参值是undefined
+    形参个数<实参个数：从左往右，一一对应,多出的实参被忽略
+    */
+    // @4 如何接收实参
+    /* 
+    + 形参接收
+    + arguments：是一个实参结合（伪数组）
+    + 剩余运算符（...）
+    */
+    function num(...arg) {//在形参里面是剩余运算符
+      // console.log(arg);//[1,2,3]
+      console.log(...arg);//1 2 3  在函数里面是展开运算符
+    }
+
+    // function num(a,...arg) {
+    //   console.log(arg);//[2,3]
+    // }
+
+    // 错误示范
+    // function num(...arg, a) {
+    //   console.log(arg);//[2,3]
+    // }
+    num(1, 2, 3);
+
+
+    // @5return 返回值
+    /* 
+    + 不写return，那就是undefined
+    + 写了return,没写内容，也是undefined
+    + return了什么内容，那就是什么
+    */
+    function fn() {
+      return 111;
+    }
+    var res = fn();
+    console.log(fn());
+
+    // @6 匿名函数
+    // console.log(function () { });
+    // fn(function () { });
+    // var fn2 = function () { };
+    // () => { };
+    // @7 自调用函数
+    (function () { })();
+    // + ~ ! -
+    // @8 箭头函数
+    function func(a, b) { return a + b };
+    var func = (a) => { return a + b };
+    // 如果形参只有一个,省略小括号，如果只有一条return语句，那就大括号和return都省略
+    var func = a => a + b;
+    // @9 回调函数
+    /* 
+    + 函数是你声明定义的
+    + 你没有调用她
+    + 函数确执行了
+    */
+
+    var ary = [1, 2, 3];
+    ary.forEach(() => {
+      console.log('@@@@');
+    });
+  </script>
+</body>
+
+</html>

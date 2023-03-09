@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script>
+  const ary = [0,1,1,1,2,,2,2,3,4,4,4,4,5,5,,5];
+  const deweightingArray = function (theArray = []) {
+    for (let i = 0; i < theArray.length; i++) {
+      const getItem = theArray[i]//第一个for循环取出一个值，用于比对。
+
+      //第二个for循环从第一个for循环索引的后一项开始，依次遍历。
+      for (let j = i + 1; j < theArray.length; j++) {
+
+        const remainItem = theArray[j]
+
+        //第一个for循环中的每一项与第二个for循环的每一项分别进行比对，如果有相同的就删除。
+        if (getItem === remainItem) {
+          theArray.splice(j, 1);
+
+
+          //由于删除时，会改变原数组，需要修复原数组的角标。
+          j=j-1; 
+        }
+      }
+    }
+    return theArray;
+  };
+  console.log(deweightingArray(ary));
+</script>

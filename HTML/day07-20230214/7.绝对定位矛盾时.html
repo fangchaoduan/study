@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      margin: 400px;
+      width: 200px;
+      height: 200px;
+      border-top: 1px solid red;
+      border-right: 1px solid yellow;
+      border-bottom: 1px solid green;
+      border-left: 1px solid blue;
+      position: relative;
+    }
+    .item{
+      width: 200px;
+      height: 200px; 
+      border: 1px solid #ccc;
+      /* border-top: 1px solid red;
+      border-right: 1px solid yellow;
+      border-bottom: 1px solid green;
+      border-left: 1px solid blue; */
+
+      position: absolute;
+      top: 100px;/* 如果`top`与`bottom`发生冲突，那么以`top`的值为准。 */
+      bottom: 10px;
+      left: 100px;/* 如果`left`与`right`发生冲突，那么以`left`的值为准。 */
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="item"></div>
+  </div>
+</body>
+</html>

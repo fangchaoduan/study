@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script src="">
+  //这个是错误的
+  var array = [5, 6, 3, 2, 4, 1, 9];
+  function insertionSorting(ary) {
+    const res = [];
+    for (let i = 0; i < ary.length; i++) {
+      let start = 0;
+      let end = res.length - 1;
+      let center = Math.floor((start + end) / 2);
+      for (; res[center] >= ary[i]; center = Math.floor((start + end) / 2)) {
+        if (res[center] <= ary[i]) {
+          start = center;
+        } else {
+          end = center;
+        }
+      }
+      res.splice(center, 0, ary[i]);
+    }
+    return res;
+  }
+  console.log(insertionSorting(array));
+</script>
+
+<script>
+  var ary = [5, 6, 3, 2, 4, 1, 9];
+  function insertSort(array = []) {
+    if (array.length === 0) {
+      return array;
+    }
+    const res = [array[0]];
+    for (let i = 1; i < array.length; i++) {
+      const getItem = array[i];
+      for (let j = res.length - 1; j >= 0; j--) {
+        if (getItem > res[j]) {
+          res.splice(j + 1, 0, getItem);
+          break;
+        }
+        if (j === 0) {
+          res.unshift(getItem);
+          break;
+        }
+      }
+    }
+    return res;
+  }
+  console.log(insertSort(ary));
+</script>
+<script src="">
+  // @1 创建一个空数组
+  // @2 将原数组的第一项放进新数组里
+  // @3 依次拿出原数组的每一项和新数组比较（从后往前比）
+  // @4 如果拿出这一项比原数组的某一项（第一次出现）的大，那就放他后面
+  // @5 全部比完，还没有大的，那就放在数组开头
+  var ary = [11, 7, 12, 46, 35];
+  function insertSort(ary) {
+    var newAry = [];
+    newAry.push(ary[0]);
+    for (var i = 1; i < ary.length; i++) {
+      var getItem = ary[i];
+      for (var j = newAry.length - 1; j >= 0; j--) {
+        var newAryItem = newAry[j];
+        if (getItem >= newAryItem) {
+          newAry.splice(j + 1, 0, getItem);
+          break;//如果一旦找到，就停止
+        }
+        if (j === 0) {
+          newAry.unshift(getItem);
+        }
+      }
+    }
+    return newAry;
+  }
+  console.log(insertSort(ary));
+</script>

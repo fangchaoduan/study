@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+    <style>
+      .box {
+        width: 100px;
+        border: 1px solid red;
+        background-color: pink;
+        line-height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">切换背景</div>
+  </body>
+</html>
+
+<script>
+  const box = document.getElementsByClassName("box")[0];
+  const body = document.getElementsByTagName("body")[0];
+  box.onclick = function () {
+    const getColorNumber = () => Math.floor(Math.random() * (255 - 0 + 1) + 0);
+    body.style.backgroundColor = `rgba(${getColorNumber()},${getColorNumber()},${getColorNumber()},1)`;
+  };
+</script>

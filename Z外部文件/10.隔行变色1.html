@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      width: 700px;
+      list-style: none;
+      margin: 50px;
+    }
+
+    li {
+      height: 60px;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+
+    .sky {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+    <li>666</li>
+  </ul>
+
+  <script>
+    var liList = document.getElementsByTagName('li');//[li,li...]
+    // 同步:必须一行一行执行
+    for (var i = 0; i < liList.length; i++) {
+      if (i % 2 === 0) {
+        liList[i].style.backgroundColor = 'pink';
+      } else {
+        liList[i].style.backgroundColor = 'skyblue';
+      }
+      // 绑定鼠标移入事件
+      liList[i].onmouseover = function () {
+        this.bgcolor = this.style.backgroundColor;
+        // this=>事件前面的东西
+        this.style.backgroundColor = 'green';
+      }
+
+      // 绑定鼠标移出事件
+      liList[i].onmouseout = function () {
+        this.style.backgroundColor = this.bgcolor;
+      }
+    }
+
+
+  </script>
+  <script src="">
+    var liList = document.getElementsByTagName('li');//[li,li...]
+    for (var i = 0; i < liList.length; i++) {
+      if (i % 2 === 0) {
+        liList[i].className = 'pink';
+      } else {
+        liList[i].className = 'sky';
+      }
+    }  
+  </script>
+</body>
+
+</html>

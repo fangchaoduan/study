@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="">
+    function func() { }
+    func();
+    // 匿名函数
+    // function(){}
+    // var a = function () { };
+    // () => { };
+    // 自调用函数(IIFE)
+    (function (a) { })(10);
+    +function () { }();
+    ~function () { }();
+    !function () { }();
+    -function () { }()
+    // console.log(function () { });
+
+  </script>
+  <script>
+    // 箭头函数
+    // console.log(() => { });
+    // function res() { };
+    // var res = () => { }
+
+    var fn = (a) => { return a + 1 }
+    // @1 形参只有一个
+    // 小括号省略
+    var fn = a => { return a + 1 }
+    // @2 函数里面只有一条return 语句
+    // 把大括号和return省略
+    var fn = a => a + 1;
+
+    // function fn2(a) {
+    //   a + 1;
+    // }
+    // var fn2 = a => { a + 1 };
+
+
+    var ary = [1, 2, 3];
+    ary.forEach(item => item + 1);
+    ary.forEach(
+      function (item) {
+        return item + 1;
+      }
+    )
+  </script>
+</body>
+
+</html>

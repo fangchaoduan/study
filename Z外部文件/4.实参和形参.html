@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div></div>
+  <script src="">
+    function func(a, b, c) {
+      // 有形参,没有实参对应,相当于声明了变量没有去赋值,是undefined
+      console.log(c);//undefined
+
+      /* 
+      参数个数问题
+        + 实参===形参,从左往右一一对应
+        + 实参>形参,多出来的实参被忽略
+        + 实参<形参,多出来的形参是undefined
+      */
+
+    }
+
+    // 传了实参,没有形参取接收,直接被忽略
+    func(100, 200);
+  </script>
+
+  <script>
+    // 接收参数的其他方法
+    function num() {
+      // arguments 所有的实参集合
+      console.log(arguments);
+      // @1 依次打印所有的实参
+      // for (var i = 0; i < arguments.length; i++) {
+      //   console.log(arguments[i]);
+      // }
+      // @2 求所有实参的总和
+      // var total;//undefined
+      // var total = null;
+      var total = 0;//10 30 60
+      for (var i = 0; i < arguments.length; i++) {
+        // total = total + arguments[i];
+        total += arguments[i];
+      }
+      // console.log(total);
+      // return 什么时候用?
+      return total;
+    }
+
+    // 只能在函数里面使用,函数外不行
+    // console.log(arguments);
+    var res = num(10, 20, 30);
+
+
+    // console.log(document.getElementsByTagName('div'));
+
+  </script>
+</body>
+
+</html>

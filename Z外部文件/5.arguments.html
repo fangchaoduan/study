@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="">
+    // 如计算所有参数和。
+
+    function add() {
+      // @1 求和
+      var total = 0;
+      for (var i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+      }
+      return total;
+    }
+    var res = add(10, 20, 30);
+    console.log(res);
+
+
+  </script>
+  <script src="">
+    function multiply() {
+      // var m = 1;
+      var m = arguments[0];
+      for (var i = 1; i < arguments.length; i++) {
+        m *= arguments[i];
+      }
+      return m;
+    }
+    var res = multiply(10, 20, 30);
+    console.log(res);
+
+
+  </script>
+  <script src="">
+    // 求所有参数平均数
+    function aver() {
+      var total = 0;
+      for (var i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+      }
+      return total / arguments.length;
+    }
+    var res = aver(10, 20, 30);
+    console.log(res);
+
+  </script>
+  <script src="">
+    // 取参数中的最大值
+    function maxValue() {
+      var max = arguments[0];//假设第一个就是最大值
+      for (var i = 1; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+          max = arguments[i];
+        }
+      }
+      return max;
+    }
+    // var res = maxValue(10, 20, 30);
+    var res = maxValue(1, 1, 20, 3);
+    console.log(res);
+
+  </script>
+  <script>
+    // 取参数中的最小值
+    function minValue() {
+      var min = arguments[0];//假设第一个就是最小值
+      for (var i = 1; i < arguments.length; i++) {
+        if (arguments[i] < min) {
+          min = arguments[i];
+        }
+      }
+      return min;
+    }
+    var res = minValue(1, 1, 20, 3);
+    console.log(res);
+  </script>
+</body>
+
+</html>

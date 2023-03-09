@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  // 三目运算
+  var num = 3;
+  // if (num > 5) {
+  //   num++;
+  // }
+
+  // 条件?true执行这里的语句:执行这里的语句
+  // @1 如果没有else,用null/undefined/void 0占位
+  // num > 5 ? num++ : null;
+  // num > 5 ? num++ : undefined;
+  // num > 5 ? num++ : void 0;
+  // console.log(num);//3
+
+  if (num > 5) {
+    num++;
+    console.log(num);
+  } else {
+    num--;
+  }
+  num > 5 ? num++ : num--;
+  // @2 如果有多条语句
+  num > 5 ? (num++, console.log(num)) : num--;
+
+
+  // @3 if  嵌套
+  if (num > 5) {
+    num++;
+    if (num == 2) {
+      console.log(num);
+    }
+  } else {
+    num--;
+  }
+  num > 5 ? (num++, (num == 2 ? console.log(num) : null)) : num--;
+
+
+</script>

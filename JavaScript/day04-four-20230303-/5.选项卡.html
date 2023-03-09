@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .tab-control {
+        box-sizing: border-box;
+        width: 800px;
+        height: 800px;
+        border: 1px solid skyblue;
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+      }
+      .nav-box {
+        display: flex;
+      }
+      .nav-item {
+        flex-grow: 1;
+        line-height: 90px;
+        text-align: center;
+        border: 1px solid red;
+        cursor: pointer;
+      }
+      .nav-item + .nav-item {
+        border-left: none;
+      }
+      .nav-item:hover,
+      .current-li {
+        color: red;
+        background-color: skyblue;
+      }
+      .show-item {
+        flex-grow: 1;
+        border: 1px solid pink;
+        display: none;
+      }
+      .current-item {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab-control">
+      <ul class="nav-box">
+        <li class="nav-item">111</li>
+        <li class="nav-item">222</li>
+        <li class="nav-item">333</li>
+        <li class="nav-item">444</li>
+        <li class="nav-item">555</li>
+      </ul>
+      <div class="show-item">111</div>
+      <div class="show-item">222</div>
+      <div class="show-item">333</div>
+      <div class="show-item">444</div>
+      <div class="show-item">555</div>
+    </div>
+  </body>
+  <script>
+    const navItemList = document.getElementsByClassName("nav-item");
+    const showItemList = document.querySelectorAll(".show-item");
+    for (let i = 0; i < navItemList.length; i++) {
+      navItemList[i].index = i;
+      navItemList[i].onclick = function () {
+        for (let i = 0; i < navItemList.length; i++) {
+          navItemList[i].className = "nav-item";
+        }
+        this.className = this.className + " current-li";
+
+        for (let i = 0; i < showItemList.length; i++) {
+          // showItemList[i].style.display = "none";
+          showItemList[i].className = "show-item";
+        }
+        // showItemList[this.index].style.display = "block";
+        showItemList[this.index].className =
+          showItemList[this.index].className + " current-item";
+      };
+    }
+  </script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script src="">
+    const getNumber = function () {
+      const result = {
+        min: arguments[0],
+        max: arguments[0],
+        total: arguments[0],
+        length: arguments.length,
+        average: arguments[0],
+      };
+      for (let i = 1; i < result.length; i++) {
+        result.total += arguments[i];
+        if (result.min >= arguments[i]) {
+          result.min = arguments[i];
+        }
+        if (result.max <= arguments[i]) {
+          result.max = arguments[i];
+        }
+      }
+      if (result.total) {
+        result.average = result.total / result.length;
+      }
+      return result;
+    };
+    const res = getNumber(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    console.log(res);
+  </script>
+  <script>
+    const getNumber = function () {
+      const result = {
+        min: arguments[0],
+        max: arguments[0],
+        total: arguments[0],
+        length: arguments.length,
+        average: arguments[0],
+      };
+      for (let i = 1; i < result.length; i++) {
+        result.total += arguments[i];
+        if (result.min >= arguments[i]) {
+          result.min = arguments[i];
+        }
+        if (result.max <= arguments[i]) {
+          result.max = arguments[i];
+        }
+      }
+      if (result.total) {
+        result.average = result.total / result.length;
+      }
+      return result;
+    };
+    const res = getNumber(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    console.log(res);
+  </script>
+</html>

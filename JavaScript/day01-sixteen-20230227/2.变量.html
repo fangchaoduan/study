@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>变量</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //变量 (容器，可以认为是数据的容器)
+  //先声明+后定义(赋值)
+  var box;//var 是固定的一个关键字，box是变量(随便叫，只要遵循命名规范)。没赋值前，值为undefined。
+  box = 100
+
+  //既声明又定义。
+  var box = 100;//
+
+  var box = 200;
+  //
+  var obj={num:100,age:18}
+  num:属性名(键/key)
+  100: 属性值(值/value)
+  属性值可以是任意数据类型，换句话说必须是某一种数据类型，或者是数字
+  属性名可能是字符串或者symbol类型
+  //变量属性的增删改查
+  点语法
+    - 点语法不能带引号
+    - 属性名是数字，不能用点语法
+  中括号语法
+    - 中括号语法一定要带引号
+    - 属性名是数字，可以带引号也可以不带引号
+    - 不带引号就默认是变量，如果该变量没被创建，就会报错 `xxx is not defined`
+      - var obj={0:'属性名为0的属性值'};console.log(obj[length]);//'属性名为0的属性值'
+  - 在对象中查找一个不存在的属性，值为undefined
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>开关灯</title>
+    <style>
+      div {
+        border: 10px solid rgb(255, 255, 0);
+        font-size: 30px;
+        width: 100px;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+      }
+    </style>
+    <script src="">
+      //在body之前写的js代码，里面的代码在执行时，会获取不到后面dom标签，因为此时js代码执行时，dom标签还没执行到，没生成DOM元素。
+      console.log(document.getElementById("box"));
+    </script>
+    <script src="">
+      //当页面加载完毕，才会执行里面代码;//window是一个对象，onload是window上的一个属性，它接受一个函数。
+      //当页面加载完毕，才会执行window.onload的值的里面代码。
+      window.onload = function () {
+        console.log(document.getElementById("box"));
+      };
+    </script>
+  </head>
+  <body>
+    <div id="box" class="box">点击<span> </span></div>
+  </body>
+  <script src="">
+    //通过id获取div。
+    //document.getElementById()//document是一个对象，getElementById是对象上的一个属性，它是一个方法。
+    console.log(document.getElementById("box"));
+  </script>
+  <script>
+    //@1 通过id获取div。
+    //document.getElementById()//document是一个对象，getElementById是对象上的一个属性，它是一个方法。
+    //标签是一个dom对象，它会包含一些键值对。
+    /* var ele = document.getElementById("box")
+    console.log(ele);
+    console.dir(ele);//使用console.dir()可以看到DOM元素的具体信息。 */
+
+    /* //@2 通过类名获取div。document.getElementsByClassName()获取到的是一个dom集合。
+    var classList = document.getElementsByClassName('box')// 获取到的是一个dom集合;
+    console.log("classList--->", classList)
+    var ele = classList[0]
+    console.log("ele--->", ele) */
+
+    /* //@3 通过标签名获取div。document.getElementsByTagName()获取到的是一个dom集合。
+    var tagList = document.getElementsByTagName('div')
+    console.log("tagList--->", tagList)
+    var ele = tagList[0]
+    console.log("ele--->", ele) */
+
+    var ele = document.getElementById("box");
+    console.dir(ele);
+
+    console.log(ele.className); //box
+    console.log(ele.id); //box
+    console.log(ele.innerHTML);//元素内的标签字符串。
+    console.log(ele.innerText);//元素内的文本。
+    ele.innerText = "显示";
+
+    // ele.onclick = () => {
+    //   if (ele.innerText === "显示") {
+    //     ele.innerText = "隐藏";
+    //   } else {
+    //     ele.innerText = "显示";
+    //   }
+    // };
+
+    ele.onclick=()=>{
+      ele.style.backgroundColor='pink'//css中用分隔线隔开的属性，在js中都要用驼峰命名法。如'background-color'变成'backgroundColor'。
+    }
+
+    ele.onmouseover = () => {
+      console.log("鼠标移入");
+    };
+    ele.onmouseout = () => {
+      console.log("鼠标移出");
+    };
+  </script>
+</html>

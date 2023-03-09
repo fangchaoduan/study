@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="">
+    // fn：函数名
+    function fn(a, b) {//形参
+      console.log(b);//undefined
+      console.log('fn1111');
+      return;
+    }
+    console.log(fn);//输出的是整个函数体
+    // 调用函数(执行)
+    fn('div');//调用的时候小括号里面的东西叫做实参
+
+  </script>
+
+  <script src="">
+    // @1 创建函数
+    function fn() {
+      console.log(111);
+    }
+    // var fn2 = function () { }
+
+    var res2 = fn();//如果没有调用,函数体里面的代码绝对不会执行
+    // fn2();
+    console.log(res2);//结果取决于return
+    var res = confirm('你确定要删除嘛?');
+  </script>
+  <script>
+    function fn() {
+      // @1 没有return 就是undefined
+      // @2 写了return,没有内容,也是undefined
+      // return;
+      // @3 return什么就是什么
+      // return 'zhufeng';
+      return 'aaa';
+    }
+
+    var res = fn();//执行fn函数里面的代码
+    console.log(res);//undefined
+    console.log(fn());
+
+
+  </script>
+</body>
+
+</html>

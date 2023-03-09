@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="">
+    var ary = [10, 20, 30];
+    // push  在数组末尾加元素
+    // var res = ary.push(40);//4
+    // pop  删除最后一项
+    // var res = ary.pop();//30
+    // shift  删除第一项
+    // var res = ary.shift();//10
+    // unshift
+    // var res = ary.unshift(10, 20, 30);//6
+    // reverse
+    // var res = ary.reverse();//[30,20,10]
+    // sort
+    // var res = ary.sort(function (a, b) { return a - b });//升序
+    // var res = ary.sort(function (a, b) { return b - a });//降序
+    // splice 
+    /* 
+    第一个参数：开始的位置
+    第二个参数：删除的个数
+    第三个参数：新增的元素
+    */
+    // var res = ary.splice();//[]
+    // var res = ary.splice(1);//[20,30]
+    // var res = ary.splice(1, 1);//[20]
+    // var res = ary.splice(1, 1, 11);//[20]   [10,11,30]
+
+    // slice
+    /* 
+    第一个参数：开始的位置
+    第二个参数：结束的位置（不包含）
+    */
+    // var res = ary.slice();//全部截取
+    // var res = ary.slice(1);//从下标为1开始全部截取
+    // var res = ary.slice(1, 2);//从下标为1开始,截取到下标为2（不包含）
+    // indexOf  第一次出现的位置
+    /* 
+    第一个参数：查找的元素
+    第二个参数：开始查找的位置
+    */
+    // var res = ary.indexOf(10);//0
+    // var res = ary.indexOf(10, 2);//-1
+    // lastIndexOf
+    /*
+    第一个参数：查找的元素
+    第二个元素：停止查找的位置
+    */
+    // var res = ary.lastIndexOf(10, 2);
+    // join
+    // var res = ary.join('|');//'10|20|30'
+    // concat
+    // [100, 200].concat(10, [20, 30]);//[100,200,10,20,30]
+    // includes
+    // var res = ary.includes(10);//true
+
+    // forEach 没有返回值
+    ary.forEach(function (item, index) {
+      console.log(item, index);
+    })
+    // map
+  </script>
+
+  <script>
+    var str = 'zhufengpeixun';
+    // charAt
+    var res = str.charAt(0);//'z'
+    // charCodeAt
+    var res = str.charCodeAt(0);//122
+
+    console.log('----------------');
+    // slice
+    // subString
+    // substr
+    /* 
+    slice&subString
+      + slice可以有负数索引，sunString是没有的
+    slice&substr
+      + 可以是负数索引，但是第二个参数是个数的意思
+    */
+    console.log('----------------');
+
+    // indexOf
+    // lastIndexOf
+    // split 用字符串中已有字符去分割 ‘1-2-3’ [1,2,3]
+    // toUpperCase
+    // toLowerCase
+    // replace
+
+  </script>
+  <script>
+    // abs 
+    // ceil
+    // floor
+    // round
+    // max
+    // min
+    // PI
+    // sqrt
+    // pow
+    // random
+  </script>
+</body>
+
+</html>

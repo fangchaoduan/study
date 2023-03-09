@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 读写数组
+    var ary = [10, 20, 30];
+    console.log(ary[2]);
+    ary[0] = 100;
+    console.log(ary);
+    console.log(ary.length);//数组的长度，元素的个数
+    ary[5] = 500;
+    console.log(ary);//稀疏数组 [100,20,30,empty*2,500]
+
+    // length属性可以做什么?
+    // @1 知道数组的长度
+    ary.length;
+    // @2 可以拿到数组的最后一项
+    ary[ary.length - 1];
+    // @3 可以删除最后一项
+    ary.length--;//ary.length=ary.length-1;
+    // @4 可以在末尾增加一项
+    ary[ary.length] = 400;
+  </script>
+  <script>
+    //  遍历数组（迭代数组/循环数组）
+    var ary2 = [10, 20, 30];
+    for (var i = 0; i < ary2.length; i++) {
+      console.log(ary2[i]);
+    }
+
+    // for in
+
+    for (var key in ary2) {
+      console.log(key);//0 1 2
+      console.log(ary2[key]);//key是一个变量，一定要用中括号
+    }
+
+    var obj = { a: 1, b: 2 }
+    for (var k in obj) {
+      console.log(k, 'kkkk');
+      console.log(obj[k]);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>001</li>
+      <li>002</li>
+      <li>003</li>
+      <li>004</li>
+      <li>005</li>
+      <li>006</li>
+      <li>007</li>
+      <li>008</li>
+      <li>009</li>
+      <li>010</li>
+    </ul>
+  </body>
+  <script>
+    const theList = document.getElementsByTagName("li");
+    for (let i = 0; i < theList.length; i++) {
+      if (i % 2 === 0) {
+        theList[i].style.backgroundColor = "pink";
+      } else {
+        theList[i].style.backgroundColor = "skyblue";
+      }
+      theList[i].onmouseover = function () {
+        this.bgcolor = this.style.backgroundColor;
+        this.style.backgroundColor = "gray";
+      };
+      theList[i].onmouseout = function () {
+        this.style.backgroundColor = this.bgcolor;
+      };
+    }
+  </script>
+</html>

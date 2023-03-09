@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="parent-box">
+        父元素文本节点01
+        <div class="item-box">子元素文本节点001</div>
+        父元素文本节点02
+        <div class="item-box">子元素文本节点002</div>
+        父元素文本节点03
+        <div class="item-box">子元素文本节点003</div>
+        父元素文本节点04
+        <div class="item-box">子元素文本节点004</div>
+        父元素文本节点05
+        <div class="item-box">子元素文本节点005</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const parentBox = document.getElementsByClassName('parent-box')[0]
+  console.log(parentBox.parentNode,'父节点')
+  console.log(parentBox.childNodes,'所有子节点的集合')
+  console.log(parentBox.firstChild,'第一个子节点')
+  console.log(parentBox.lastChild,'最后一个子节点')
+
+  const childItem3 = parentBox.getElementsByClassName('item-box')[2]
+  console.log(childItem3.previousSibling,'上一个兄弟节点')
+  console.log(childItem3.nextSibling,'下一个兄弟节点')
+
+
+  console.log(parentBox.children,'所有子元素的集合')
+  console.log(parentBox.firstElementChild,'第一个子元素')
+  console.log(parentBox.lastElementChild,'最后一个子元素')
+  console.log(childItem3.previousElementSibling,'上一个兄弟元素')
+  console.log(childItem3.nextElementSibling,'下一个兄弟元素')
+</script>
+<script src="">
+  /*
+  节点类：
+    parentNode    父节点 
+    childNodes     所有子节点的集合 
+    firstChild    第一个子节点 
+    lastChild     最后一个子节点 
+    previousSibling   上一个兄弟节点 
+    nextSibling       下一个兄弟节点
+  元素类：
+    children     所有子元素的集合 
+    firstElementChild   第一个子元素  IE9+ 
+    lastElementChild    最后一个子元素 IE9+ 
+    previousElementSibling  上一个兄弟元素 IE9+ 
+    nextElementSibling    下一个兄弟元素  IE9+  
+  */
+  console.log(eleFirstLi.parentNode);
+  console.log(eleUl.childNodes);
+  console.log(eleUl.children); //所有子元素
+  console.log(eleUl.firstChild); //第一个子节点 文本
+  console.log(eleUl.firstElementChild); //第一个子元素节点 文本
+  console.log(eleUl.lastChild); //最后一个子元素节点 文本
+  console.log(eleUl.lastElementChild); //最后一个子元素节点 文本
+  console.log(eleUl.previousSibling); //上一个兄弟节点 文本
+  console.log(eleUl.nextSibling); //下一个兄弟节点 文本
+  console.log(eleFirstLi.previousElementSibling); //上一个兄弟元素节点 文本
+  console.log(eleUl.nextElementSibling); //下一个子兄弟元素节点 文本
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>节点知识点</title>
+  </head>
+  <body>
+    <div id="app" class="my-app">
+      div标签文本节点
+      <!-- 注释节点文本 -->
+      <a href="http://1996f.com">a标签文本节点</a>
+    </div>
+  </body>
+</html>
+
+<script>
+  //console.log(app); //如果变量app没被定义,且文档中存在id为'app'的标签。直接拿到id为'app'的DOM元素。
+
+
+  console.log("-------elementNode元素节点start-----");
+  const elementNode = document.getElementById("app");
+  console.log(elementNode.nodeType); //节点类型//1
+  console.log(elementNode.nodeName); //节点名称//'DIV'
+  console.log(elementNode.nodeValue); //节点值//null
+
+  console.log("-------attributeNode属性节点start- getAttributeNode 拿到属性节点----");
+  const attributeNode = elementNode.getAttributeNode("class");
+  console.log(attributeNode.nodeType); //节点类型//2
+  console.log(attributeNode.nodeName); //节点名称//'class'
+  console.log(attributeNode.nodeValue); //节点值//'my-app'
+
+  console.log("-------textNode文本节点start- childNodes 所有子节点 ----");
+  const textNode = elementNode.childNodes[0];
+  console.log(textNode.nodeType); //节点类型//3
+  console.log(textNode.nodeName); //节点名称//'#text'
+  console.log(textNode.nodeValue); //节点值//`\n      div标签文本节点\n      `//这里把拆行和空格都记录了，共计三行。不同的换行有不同的效果。
+
+  console.log("-------annotationNode注释节点start-----");
+  const annotationNode = elementNode.childNodes[1];
+  console.log(annotationNode.nodeType); //节点类型//8
+  console.log(annotationNode.nodeName); //节点名称//'#comment'
+  console.log(annotationNode.nodeValue); //节点值//' 注释节点文本 '
+
+  console.log("-------documentNode文档节点start-----");
+  const documentNode = document
+  console.log(documentNode.nodeType); //节点类型//9
+  console.log(documentNode.nodeName); //节点名称//'#document'
+  console.log(documentNode.nodeValue); //节点值//null
+</script>

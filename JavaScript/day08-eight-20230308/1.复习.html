@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script src="">
+  //Array.forEach()
+  function forEach(callback = () => {}) {
+    for (var i = 0; i < this.length; i++) {
+      callback(this[i], i, this);
+    }
+  }
+
+  var theArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  theArray.forEach((item, i, array) => {
+    const randomNumber = Math.floor(Math.random() * (9 - 0 + 1) + 0);
+    setTimeout(
+      (num, index) => {
+        for (let i = 0; i < array.length; i++) {
+          array[i] = array[i] + "-" + index;
+        }
+        console.log(index, num, array[0]);
+        //console.log(item, i, array);
+      },
+      randomNumber,
+      randomNumber,
+      i
+    );
+  });
+</script>
+
+<script src="">
+  //重复
+  var str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  function randomCode(str = "", num = 4) {
+    const strArray = str.split("");
+    let res = "";
+    for (let i = 0; i < num; i++) {
+      const index = Math.floor(
+        Math.random() * (strArray.length - 1 - 0 + 1) + 0
+      );
+      res += strArray[index];
+    }
+    return res;
+  }
+  console.log(randomCode(str));
+</script>
+<script src="">
+  //不重复
+  var str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  function randomCode(str = "", num = 4) {
+    const strArray = str.split("");
+    let res = "";
+    for (let i = 0; i < num; i++) {
+      const index = Math.floor(
+        Math.random() * (strArray.length - 1 - 0 + 1) + 0
+      );
+      // res += strArray[index];
+      res += strArray.splice(index, 1);
+    }
+    return res;
+  }
+  console.log(randomCode(str));
+</script>
+
+<script src="">
+  var str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  function randomCode(str = "", num = 4) {
+    const strArray = str.split("");
+    let res = "";
+    const indexArray = [];
+    for (let i = 0; i < num; i++) {
+      const index = Math.floor(
+        Math.random() * (strArray.length - 1 - 0 + 1) + 0
+      );
+      if (indexArray.includes(index)) {
+        i--;
+        continue;
+      } else {
+        res += strArray[index];
+        indexArray.push(index);
+      }
+    }
+    return res;
+  }
+  console.log(randomCode(str));
+</script>
+
+<script src="">
+  var str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  function randomCode(str = "", num = 4, repeat = false) {
+    let res = "";
+    for (let i = 0; i < num; i++) {
+      const index = Math.floor(Math.random() * (str.length - 1 - 0 + 1) + 0);
+
+      if (repeat) {
+        res += str[index];
+        continue;
+      }
+
+      if (res.includes(str[index])) {
+        i--;
+        continue;
+      }
+
+      res += str[index];
+    }
+    return res;
+  }
+  console.log(randomCode(str, 4));
+</script>
+
+<script>
+  var str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  function randomCode(str = "", num = 4, isRepeat = false) {
+    
+    let res = "";
+    for (let i = 0; i < num; i++) {
+      const index = Math.floor(Math.random() * (str.length - 1 - 0 + 1) + 0);
+
+      console.log(index);
+      if (!isRepeat && res.includes(str[index])) {
+        i--;
+        continue;
+      }
+
+      res += str[index];
+    }
+    return res;
+  }
+  console.log(randomCode(str, 9));
+</script>

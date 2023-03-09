@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script>
+  /*
+    var  str ="https://www.baidu.com?name=zhufeng&age=10&id=14";
+    {
+        name:"zhufeng",
+        age:10,
+        id:14
+    }
+  */
+
+  var str = "https://www.baidu.com?name=zhufeng&age=10&id=14";
+  var transformUrl = (url) => {
+    var queryString = url.split("?")[1];
+    var queryList = queryString.split("&");
+    const res = {};
+    for (let i = 0; i < queryList.length; i++) {
+      const query = queryList[i].split("=")
+      const key = query[0];
+      const value = query[1];
+      res[key] = value;
+    }
+    return res;
+  };
+  console.log(transformUrl(str));
+</script>

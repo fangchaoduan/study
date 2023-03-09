@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      ul {
+        width: 800px;
+        margin: 50px auto;
+        list-style: none;
+      }
+      ul > li {
+        width: 200px;
+        border: 1px solid gray;
+      }
+
+      .sky {
+        background-color: skyblue;
+      }
+      .pink {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>第1item</li>
+      <li>第2item</li>
+      <li>第3item</li>
+      <li>第4item</li>
+      <li>第5item</li>
+      <li>第6item</li>
+      <li>第7item</li>
+      <li>第8item</li>
+      <li>第9item</li>
+      <li>第10item</li>
+    </ul>
+  </body>
+  <script>
+    const theList = document.getElementsByTagName("li");
+    for (let i = 0; i < theList.length; i++) {
+      const nowEle = theList[i]
+      if (i % 2 === 0) {
+        nowEle.style.backgroundColor = "pink";
+      } else {
+        nowEle.style.backgroundColor = "skyblue";
+      }
+
+      nowEle.onmouseover = function () {
+        this.myColor = this.style.backgroundColor;//this指向的是当前调用当前函数的对象。
+        this.style.backgroundColor = "yellow";
+      };
+      nowEle.onmouseout = function () {
+        this.style.backgroundColor = this.myColor;
+      };
+    }
+  </script>
+</html>

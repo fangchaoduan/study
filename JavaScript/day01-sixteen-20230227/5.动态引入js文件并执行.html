@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动态引入js代码并执行</title>
+  </head>
+  <body></body>
+  <script>
+    async function loadJSModule() {
+      const module = await import("./动态js模块.js");
+      //console.log("module--->", module);
+      // 加载成功后可以使用该模块
+      module.fang.theFunction();//Symbol(动态js模块里的东西);
+    }
+
+    loadJSModule();
+  </script>
+</html>

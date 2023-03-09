@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<!-- <script>
+  const ary = [0, 1, 1, 1, 2, , 2, 2, 3, 4, 4, 4, 4, 5, 5, , 5];
+  const deweightingArray = function (theArray = []) {
+    const obj = Object.create(null);
+    for (let i = 0; i < theArray.length; i++) {
+      if (obj[theArray[i]] === undefined) {
+        obj[theArray[i]] = i;
+      } else {
+        theArray.splice(i, 1);
+        i = i - 1;
+      }
+    }
+    return theArray;
+  };
+  console.log(deweightingArray(ary));
+</script> -->
+
+<!-- <script src="">
+  const ary = [0, 1, 1, 1, 2, 3, undefined, 2, 3, 4, 4, {}, {}, 5, 5, , 5];
+  const deweightingArray = function (theArray = []) {
+    const array = [];
+    for (let i = 0; i < theArray.length; i++) {
+      if (typeof array[theArray[i]] === 'undefined') {
+        array[theArray[i]] = i;
+      } else {
+        theArray.splice(i, 1);
+        i = i - 1;
+      }
+    }
+    return theArray;
+  };
+  console.log(deweightingArray(ary));
+</script> -->
+
+<script>
+  const ary = [0, 1, 1, 1, 2, , 2, 2, 3, 4, 4, 4, 4, 5, 5, , 5];
+  const deweightingArray = function (theArray = []) {
+    const obj = Object.create(null);
+    for (let i = 0; i < theArray.length; i++) {
+      if (obj[theArray[i]] !== undefined) {
+        // theArray.splice(i, 1, theArray[theArray.length - 1]);
+        theArray[i] = theArray[theArray.length - 1];//当前项是重复项，本来需要删除。但如果删除了之后，它后面每一项的角标都会改变。所以就把最后一项的值放到当前项里。 
+        theArray.length = theArray.length - 1;// 最后一项的值已经放到当前项里了。最后一项已经变得多余，所以删除掉最后一项。
+
+        i = i - 1;// 此时占位的这一项的值已经变成了之前最后一项的值，导致还没有通过上方的if语句进行比较，所以需要i--,再重新比较一次。
+        continue;//已经删除了，所以跳过本轮循环，进行下一轮。
+      }
+
+      obj[theArray[i]] = i;
+    }
+    return theArray;
+  };
+  console.log(deweightingArray(ary));
+</script>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. slice(startindex,endindex)  
+        // 作用：获取子数组
+        //startindex 开始下标  endindex结束下标
+        //特色：含头不含尾
+        //原来的数组不变
+        //返回结果是新数组
+
+        // var arr=[10,20,30,40,50];
+        // var newarr=arr.slice(1,3);
+        // console.log(newarr);
+        // console.log(arr);
+
+        // 可以不写第二参数，默认截取到最后
+        //复制数组
+        // var arr=[10,20,30,40,50];
+        // var newarr=arr.slice(0);
+        // console.log(newarr);
+
+        //[30,40,50]
+        // var arr=[10,20,30,40,50];
+        // var newarr=arr.slice(2);
+        // console.log(newarr);
+
+        // slice 的参数可以取赋值，方向一定是“由左向右”,含头不含尾
+        //       -5 -4 -3 -2 -1
+        // var arr=[10,20,30,40,50];
+        // var newarr=arr.slice(-3,-1);
+        // console.log(newarr);
+
+
+        // var nums = [1, 2, 3, 4, 5, 6];
+        // var res = nums.slice(1);
+        // console.log(nums);//[1, 2, 3, 4, 5, 6]
+        // console.log(res);// [2, 3, 4, 5, 6]
+
+
+        // var nums = [1, 2, 3, 4, 5, 6];
+        // var res = nums.slice(1, 5);
+        // console.log(nums);//[1, 2, 3, 4, 5, 6]
+        // console.log(res);// [2, 3, 4, 5]
+
+
+        // var nums = [1, 2, 3, 4, 5, 6];
+        // var res = nums.slice(-5, -1);
+        // console.log(nums);//[1, 2, 3, 4, 5, 6]
+        // console.log(res);// [2, 3, 4, 5]
+
+
+        //2.concat  数组拼接
+        //结果返回的是拼接后的新数组
+        //原来的数组不变
+        //如果拼接的内容是数组，将数组的内容取出拼接
+        // var arr=[10,20,30];
+        // var newarr=arr.concat(1,2,3,"hello",true,["a","b"]);
+        // console.log(newarr);
+        // console.log(arr);
+
+        //3. toString 将数组转化为字符串
+        // 无参数  默认","拼接
+        // 原来的数组不变
+        // var arr=[10,20,30];
+        // var newstr=arr.toString();
+        // console.log(newstr);
+        // console.log(arr);
+
+        //遇到 {}---》[object Object]
+        //遇到 null/undefined--->空
+        var ary1 = [1, { a: 1 }, null, undefined, 3];
+        var res = ary1.toString();
+        console.log(ary1);//[1, {a:1},null, undefined, 3]
+        console.log(res)//1,[object Object],,,3 
+    </script>
+</body>
+</html>

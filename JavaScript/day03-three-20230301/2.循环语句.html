@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  for(var i =0;i<5;i++){
+    //i => 0 => 1 => 2 => 3 => 4
+    console.log('for内开始',i)//0 1 2 3 4
+    if(i===3){
+      continue //结束当前for循环中的本轮循环，继续下一轮次
+    }
+    //i => 0 => 1 => 2 => 4 => 5
+    console.log('for内最后',i)//0 1 2 4
+  }
+  console.log('for外continue',i)//5
+
+
+  for(var i =0;i<5;i++){
+    //i => 0 => 1 => 2 => 3
+    console.log('for内开始',i)//0 1 2 3
+    if(i===3){
+      break  //结束当前for循环。即结束当前for循环中的所有轮次循环
+    }
+    //i => 0 => 1 => 2 
+    console.log('for内最后',i)//0 1 2
+  }
+  console.log('for外break',i)//3
+
+
+</script>
+</html>

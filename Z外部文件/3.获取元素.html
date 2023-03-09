@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class=""></div>
+  <input type="text" name="box">
+  <script>
+    // @1 通过id获取 不能改上下文
+    var ele1 = document.getElementById('box');
+    // @2 通过类名Elements -》带s的都是数组集合（伪数组）
+    var ele2 = document.getElementsByClassName('box');
+    // @3 通过标签名
+    var ele3 = document.getElementsByTagName('input');
+    // @4 通过name属性 建议input使用
+    var ele4 = document.getElementsByName('box');
+    // @5 通过选择器获取
+    var ele5 = document.querySelector('div+input');//
+    var ele6 = document.querySelectorAll('div+input');//[]
+
+    // 获取html/body/head
+    console.log(document.documentElement);
+    console.log(document.body);
+    console.log(document.head);
+    // 一个屏幕的宽度和高度
+    console.log(document.documentElement.clientWidth || document.body.clientWidth);
+    console.log(document.documentElement.clientHeight || document.body.clientHeight);
+  </script>
+</body>
+
+</html>

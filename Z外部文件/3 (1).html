@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="">
+    ary[0][1][1];
+    obj.a.b.c;
+    fn()()();
+  </script>
+  <script src="">
+    /* 
+    @1 push
+    作用：在数组末尾增加元素
+    参数：追加的元素
+    返回值：加完之后的长度
+    是否改变原数组：改变
+    */
+    var ary = [10, 20, 30];
+    // var returnValue = ary.push(40,50);
+    var returnValue = ary.push(40);
+    console.log(returnValue, '返回值');
+    console.log(ary, '原数组');
+  </script>
+  <script src="">
+    /*
+    @2 pop
+    作用：删除最后一项
+    参数：无参数
+    返回值：删除的那一项
+    是否改变原数组：改变
+    */
+    var ary = [10, 20, 30];
+    var returnValue = ary.pop();
+    console.log(returnValue, '返回值');
+    console.log(ary, '原数组');
+  </script>
+  <script src="">
+    /*
+    @3 pop
+    作用：在数组开头加元素
+    参数：追加的元素
+    返回值：加完的长度
+    是否改变原数组：改变
+    */
+    var ary = [10, 20, 30];
+    var returnValue = ary.unshift(-1, 0);
+    console.log(returnValue, '返回值');
+    console.log(ary, '原数组');
+  </script>
+  <script src="">
+    /*
+    @4 shift
+    作用：删除第一项
+    参数：无参数
+    返回值：删除的那一项
+    是否改变原数组：改变
+    */
+    var ary = [10, 20, 30];
+    var returnValue = ary.shift();
+    console.log(returnValue, '返回值');
+    console.log(ary, '原数组');
+  </script>
+  <script src="">
+    /*
+    @5 reverse
+    作用：翻转数组
+    参数：无参数
+    返回值：翻转之后的数组
+    是否改变原数组：改变
+    */
+    var ary = [10, 20, 30];
+    var returnValue = ary.reverse();
+    console.log(returnValue, '返回值');
+    console.log(ary, '原数组');
+  </script>
+  <script src="">
+    /*
+     @2 sort
+     作用：
+     参数：
+     返回值：
+     是否改变原数组：
+     */
+    var ary = [30, 15, 2];
+    // 不填参数，只能排10以内
+    // var returnValue = ary.sort();
+    // >=10要传参数
+    var returnValue = ary.sort(function (a, b) {
+      return a - b;//升序
+      // return b - a;//降序
+    });
+    console.log(returnValue, '返回值');
+    console.log(ary, '原数组');
+  </script>
+  <script>
+    /*
+    @2 pop
+    作用：
+    参数：
+    返回值：
+    是否改变原数组：
+    */
+  </script>
+
+  <script src="">
+    var ary = [10, 5, 8];
+    ary.sort((a, b) => a - b);
+
+
+    function sort(callback) {
+      // callback指的就是箭头函数
+      callback()
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      border: 10px solid red;
+      font-size: 30px;
+      width: 100px;
+      text-align: center;
+    }
+  </style>
+  <!-- <script>
+    // 当页面加载完毕,才会执行里面代码
+    window.onload = function () {
+      console.log(document.getElementById('box'));
+    }
+  </script> -->
+
+</head>
+
+<body>
+  <div id="box" class="box">点击</div>
+</body>
+
+</html>
+<script>
+  // @1 直接获取到一个元素 通过id
+  // console.log(document.getElementById('box'));
+  //  标签是一个dom对象
+  // var ele = document.getElementById('box');
+  // ele.index = 100;
+  // console.dir(ele);
+
+  // @2 通过类名
+  // var ele = document.getElementsByClassName('box')[0];// 获取到的是一个dom集合
+  // console.log(ele);
+
+  // @3 通过标签名
+  var ele = document.getElementsByTagName('div')[0];
+  console.log(ele);
+
+</script>

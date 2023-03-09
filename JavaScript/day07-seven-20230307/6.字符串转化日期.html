@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script>
+  // var str = "2019-8-18 12:32:18";
+  var str = "2008-8-8 8:8:8";
+  const transformTime = (time = "2019-8-18 12:32:18") => {
+    function addZero(num) {
+      return num < 10 ? "0" + num : num;
+    }
+
+    const before = time.split(" ")[0].split("-");
+    const after = time.split(" ")[1].split(":");
+    const res = `${before[0]}年${addZero(before[1])}月${addZero(
+      before[2]
+    )}日 ${addZero(after[0])}时${addZero(after[1])}分${addZero(after[2])}秒`; //2019年08月18日 12时32分18秒
+    return res;
+  };
+  console.log(transformTime(str));
+</script>
+
+<script>
+  var ary = [12,3,6,9,5,8,4,7,0,2,3,5];
+  const quicksort = (array) => {
+    if(array.length<=1){return array}
+    const res = [array[0]]
+    for(let i=1;i<array.length;i++){
+      for(let j=res.length-1;j>=0;j--){
+        if(array[i]>res[j]){
+          res.splice(j+1,0,array[i])
+          break
+        }
+        if(j===0){
+          res.unshift(array[i])
+        }
+      }
+    }
+    return res;
+  };
+  console.log(quicksort(ary));
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 700px;
+      }
+      li {
+        line-height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+      <li>111</li>
+    </ul>
+    <!-- <script>
+      for (var i = liList.length - 1; i >= 0; i--) {
+        console.log(i);
+      }
+    </script> -->
+    <script>
+      // @1 获取元素方法
+      var liList = document.getElementsByTagName("li"); //[li,li...]
+      // @2 循环绑定鼠标移入移出，加背景颜色
+      for (var i = 0; i < liList.length; i++) {
+        if (i % 2 === 0) {
+          liList[i].style.backgroundColor = "pink";
+        } else {
+          liList[i].style.backgroundColor = "skyblue";
+        }
+
+        liList[i].onmouseover = function () {
+          this.bgcolor = this.style.backgroundColor;
+          this.style.backgroundColor = "green";
+        };
+        liList[i].onmouseout = function () {
+          this.style.backgroundColor = this.bgcolor;
+        };
+      }
+    </script>
+  </body>
+</html>

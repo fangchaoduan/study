@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script  >
+  var ary = [10, 20, 30];
+  console.log(ary.push(40, 50)); //5
+  var ary = [10, 20, 30];
+  console.log(ary.pop()); //30
+  var ary = [10, 20, 30];
+  console.log(ary.unshift(-10, 0)); //5
+  var ary = [10, 20, 30];
+  console.log(ary.shift()); //10
+  var ary = [10, 20, 30];
+  console.log(ary.reverse()); //[30,20,10]
+  var ary = [10, 20, 30];
+  console.log(ary.splice(ary.length, 0, 40, 50)); //[]
+  var ary = [10, 20, 30];
+  console.log(ary.slice(0, ary.length)); //[10,20,30]
+  var ary = [10, 20, 30];
+  console.log(ary.toString()); //'10,20,30'
+  var ary = [10, 20, 30];
+  console.log(ary.join(",")); //'10,20,30'
+  var ary = [10, 20, 30];
+  console.log(ary.indexOf(10, 0)); //0
+  var ary = [10, 20, 30];
+  console.log(ary.lastIndexOf(30, ary.length - 1)); //2
+  var ary = [10, 20, 30];
+  console.log(ary.includes(10)); //true
+</script>

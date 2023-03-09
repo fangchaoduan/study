@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+</html>
+<script>
+  /*
+    + 变量
+    + 数据类型
+    + 数据类型转换
+    + 相关方法
+    + 普通对象（增删改查）
+    + 数组（简单学习）
+    + 条件语句
+    + 循环语句
+    + 跳转语句
+    + 堆栈内存简单讲解
+    + 运算符（&& || ！）
+    + == ===区别
+    + i++  ++i
+    + 三元表达式
+    + 开关灯
+    + 隔行变色
+  */
+</script>
+<script>
+  // 变量 声明+定义（赋值=）
+  var num = 100;
+  var num2;
+  console.log(num2); //undefined  只声明不定义
+  num2 = 200;
+  // 只能声明一次，可以赋值无数次
+
+  // var
+  // const
+  // let
+  // class
+  // function
+  // import
+</script>
+<script>
+  /*
+    数据类型
+      + 原始值
+        + number 
+        + string
+        + boolean
+        + null
+        + undefined
+        + symbol
+        + bigint
+      + 对象
+        + object
+        + array
+        + function（函数）
+  */
+</script>
+<script>
+  // 数据类型转换
+  /* 
+    Number();  对象类型转number，中间还有一步隐式转换（toString）
+    String();  {}=>'[object Object]'  []=>''
+    Boolean(); null undefined NaN 0 ''
+  */
+  // Boolean(false);//false
+</script>
+<script>
+  // parseInt
+  // parseFloat
+  // isNaN
+  // toFixed
+  // BinInt
+</script>
+<script>
+  var obj = { a: 1, 111: "number" };
+  obj.a;
+  obj["a"];
+  obj[a]; //a是变量  a is not defined
+
+  obj[name]; //找一个不存在的属性名 是undefined
+
+  obj[111];
+  obj["111"];
+  // 属性名只能是字符串或者symbol，如果不是，回转为字符串
+  obj.b = 2;
+  var o = {};
+  obj[o] = "object"; //{'[object Object]':'object'}
+
+  // obj[Symbol()] = "唯一";
+  var s = Symbol();
+  obj[s] = "唯一";
+  console.log(obj[s]);
+
+  delete obj.a;
+  obj.a = null;
+</script>
+<script>
+  var ary = [10, 20, 30];
+  // 索引
+  // length
+</script>
+<script>
+  // if(){}
+  // if(){}else{}
+  // if(){}else if(){}else{}
+  // 只会进入一个判断
+  // 条件一定为转为布尔值
+
+  // switch case  必须是===
+
+  // while
+  // do while
+  // for(var i=0;i<10;i++){}
+
+  // break continue return
+</script>
+<script>
+  // ||(或者，只要满足一个条件就是true)
+  // &&(必须两个条件都是true，才最终是true)
+  // !(先将！后面的转布尔值再取反)
+  // + +xxx（转number）
+  // !! 转布尔值
+  // % 取余数
+</script>
+<script>
+  // {}=={}
+  // []==[]
+</script>
+<script>
+  // 条件？xxx:xxx;
+</script>

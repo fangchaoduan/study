@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var res1 = !(!'Number(undefined)');//!false -> true
+  var res2 = Boolean(Number('')) + !isNaN(Number(null)) + Boolean('parseInt([])') + typeof !(null);//Boolean(0) + !isNaN(0) + true + typeof true  --> false + !false + true + (typeof true) --> false + true + true + 'boolean' --> 0 + 1 + 1 + 'boolean' -> '2boolean'
+  var res3 = parseFloat('1.6px') + parseInt('1.2px') + typeof parseInt(null);//parseFloat('1.6px') + parseInt('1.2px') + typeof parseInt(null) --> 1.6 + 1 + (typeof parseInt('null')) --> 2.6 + (typeof NaN) --> 2.6 + 'number' -->'2.6number'
+  var res4 = isNaN(Number(!!Number(parseInt('0.8'))));//isNaN(Number(!!Number(0))) --> isNaN(Number(!!0)) --> isNaN(Number(false)) --> isNaN(0) --> false
+  var res5 = typeof 'parseInt(null)' + 12 + !!Number(NaN);//'string' + 12 + !!NaN --> 'string12' + false --> 'string12false'
+  var res6 = !typeof (isNaN('')) + parseInt(NaN);//!typeof (isNaN(0)) + NaN --> !typeof (false) + NaN --> !'boolean' + NaN --> false + NaN --> 0 + NaN --> NaN
+  var res7 = typeof !parseInt(null) + !isNaN(null);//typeof !NaN + !isNaN(0) --> typeof true + !false --> 'boolean' + true --> 'booleantrue'
+  console.log(res1,res2,res3,res4,res5,res6,res7)
+</script>
+</html>

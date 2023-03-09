@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: pink;
+    }
+
+    div {
+      border: 10px solid red;
+      width: 150px;
+      line-height: 80px;
+      text-align: center;
+      background-color: skyblue;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    切换背景颜色
+  </div>
+  <script src="">
+    // 案例1 页面中有一个按钮 点击按钮 body的背景颜色随机切换一种
+    var divEle = document.getElementsByTagName('div')[0];
+    var bEle = document.getElementsByTagName('body')[0];
+    divEle.onclick = function () {
+      // 0-255
+      var r1 = Math.floor(Math.random() * 256);
+      var r2 = Math.floor(Math.random() * 256);
+      var r3 = Math.floor(Math.random() * 256);
+
+      bEle.style.backgroundColor = `rgb(${r1},${r2},${r3})`
+    }
+  </script>
+  <script src="">
+    // 案例2 4位数的随机验证码  不能重复  （0-9 a-z A-Z）
+    // 第一版：可以重复
+    var str = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+    function getCode(str) {
+      var res = '';
+      for (var i = 0; i < 4; i++) {
+        var index = Math.floor(Math.random() * 62);
+        res += str[index];
+      }
+      return res;
+    }
+    console.log(getCode(str));
+  </script>
+  <script>
+    var str = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+    function getCode(str) {
+      var res = '';
+      for (var i = 0; i < 4; i++) {
+        var index = Math.floor(Math.random() * 62);
+        if (!res.includes(str[index])) {
+          res += str[index];
+        } else {
+          i--;
+        }
+      }
+      return res;
+    }
+    console.log(getCode(str));
+    
+  </script>
+</body>
+
+</html>

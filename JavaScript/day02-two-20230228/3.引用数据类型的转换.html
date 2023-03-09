@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    var n = {
+      x: 100,
+    };
+    var m = [100, 200];
+    var obj = {};
+    obj[n] = "珠峰";//obj[{x: 100,}] = obj['[object Object]']= "珠峰"
+    obj[m] = "培训";//obj[[100, 200]] = obj['100,200']= "培训"
+    //{'[object Object]':"珠峰",'100,200':"培训"}
+    console.log(obj);
+  </script>
+</html>

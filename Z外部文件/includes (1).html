@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    姚凯 16619816985（微信、电话）
+    <script>
+        //6.includes  判断数组中是否含有某项内容
+        // 有 true   没有 false   boolean
+        // 不会修改原来的数组
+
+        var arr=[10,20,30,10];
+        console.log(arr.includes(10));//true
+        console.log(arr.includes(100));//false
+        console.log(arr);//[10,20,30,10];
+
+
+        //7.forEach  数组的迭代方法  相当于for
+        //forEach(回调函数)
+        // 回调函数(数组的每一项,索引下标,当前数组)
+        // 回调函数中，没有return (写了也没用)
+        // 返回值 undefined
+
+        var arr=[10,20,30];
+        for(var i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        }
+
+        var arr=[10,20,30];
+        var res = arr.forEach((item,index,ary)=>{
+           //console.log(item);
+           //console.log(index);
+           //console.log(ary);
+           //return 10;
+        })
+        console.log(res);
+        console.log(arr);
+
+
+       //map跟forEach 的用法一样
+       //唯一不一样的是 map 有return(返回值)
+       //结果新的数组(新数组的每一项，就是循环后返回的值)
+        var arr=[100,200,300];
+        var res = arr.map((item,index,ary)=>{
+        //    console.log(item);
+        //    console.log(index);
+        //    console.log(ary);
+           return item+10;
+        })
+        console.log(res);
+        console.log(arr);
+
+
+
+        //一个家庭的年龄 过年了  每个人长1岁
+        //方法1 创建一个新数组
+        var userAages = [19,21,18,34,32,25,45];//[20,22,19...]
+        var newuserAages=userAages.map(item=>item+1)
+        console.log(newuserAages);
+
+        var userAages = [19,21,18,34,32,25,45];//[20,22,19...]
+        var newarr=[];
+        for(var i=0;i<userAages.length;i++){
+            newarr.push(userAages[i]+1)
+        }
+        console.log(newarr);
+
+        var userAages = [19,21,18,34,32,25,45];//[20,22,19...]
+        var newarrA=[];
+        userAages.forEach(item=>{
+            newarrA.push(item+1)
+        })
+        console.log(newarrA);
+        
+
+        //方法2 直接改变原来数组
+        var userAages = [19,21,18,34,32,25,45];//[20,22,19...]
+        var re = userAages.forEach(function (item,index,array) {
+            userAages[index] = item + 1;
+        })
+        console.log(userAages);//原来的数组，新的值 [20,22,19...]
+        console.log(re);//undefined
+
+    </script>
+</body>
+</html>

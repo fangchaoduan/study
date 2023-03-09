@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<!-- <script>
+  const array = [4,3,2,1];
+  const bubbleSort = (theArray = []) => {
+    for (let i = 0; i < theArray.length - 1; i++) {
+      const getItem = theArray[i];
+      for (let j = i + 1; j <= theArray.length - 1; j++) {
+        const rearItem = theArray[j];
+        if (getItem > rearItem) {
+          const thisItem = theArray[j];
+          theArray[j] = theArray[i];
+          theArray[i] = thisItem;
+          console.log(`此时i=${i},j=${j}; ${theArray}`);
+          i--;
+          break;
+        }
+      }
+    }
+    return theArray;
+  };
+  console.log(bubbleSort(array));
+</script> -->
+
+<!-- <script>
+  const array = [4,3,2,1];
+  const bubbleSort = (array = []) => {
+    let index = 0;
+    for (let i = 0; i < array.length - 1; i++) {
+      const getItem = array[i];
+      for (let j = i + 1; j <= array.length - 1; j++) {
+        index++
+        const rearItem = array[j];
+        if (getItem > rearItem) {
+          const thisItem = array[j];
+          array[j] = array[i];
+          array[i] = thisItem;
+          console.log(`此时i=${i},j=${j}; ${array}`);
+          i--;
+          break;
+        }
+      }
+    }
+    console.log(`index:${index}`);
+    return array;
+  };
+  console.log(bubbleSort(array));
+</script> -->
+
+<!-- <script>
+  const array = [4, 3, 2, 1];
+  const bubbleSort = (array = []) => {
+    console.log(`开始 = ${array}`)
+    for (let i = 0; i < array.length; i++) {
+      for (let j = 0; j < array.length - 1; j++) {
+        if (array[j] > array[j + 1]) {
+          const max = array[j];
+          array[j] = array[j + 1];
+          array[j + 1] = max;
+        }
+        console.log(`i:${i}-j:${j} = ${array}`)
+      }
+      
+      console.log(`第${i+1}外轮 = ${array}`)
+    }
+    console.log(`结束 = ${array}`)
+    return array;
+  };
+  console.log(bubbleSort(array));
+</script> -->
+
+<script>
+  const array = [4, 3, 2, 1];
+  const bubbleSort = (array = []) => {
+    for (let i = 0; i < array.length - 1; i++) {
+      for (let j = 0; j < array.length - 1 - i; j++) {
+        if (array[j] > array[j + 1]) {
+          const max = array[j];
+          array[j] = array[j + 1];
+          array[j + 1] = max;
+        }
+        console.log(`i:${i}-j:${j} = ${array}`);
+      }
+
+      console.log(`第${i + 1}外轮 = ${array}`);
+    }
+    return array;
+  };
+  console.log(bubbleSort(array));
+</script>

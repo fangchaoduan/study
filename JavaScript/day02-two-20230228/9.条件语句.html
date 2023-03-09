@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // 括号里的条件最终会是布尔值，如果是true，就会进入并执行
+  if(怎么样){
+    //code...
+  }
+
+
+  if(1>0){
+    console.log("if()里条件对了，执行if语句");
+  }
+
+
+  if(4>5){
+    console.log('if()里条件对了，只执行if语句')
+  }else{
+    console.log('if()里条件不对，else语句执行')
+  }
+
+  //进且必定只进一个。
+  if(1>0){
+    console.log("if()里条件对了，只执行if语句")
+  }else if(3>2){
+    console.log("if()里条件错了，else if()里条件对了，执行else if语句")
+  }else{
+    console.log("if()里条件错了，else if()里条件错了，执行else语句")
+  }
+
+  var num = 1
+  if(num){
+    console.log("if()里条件对了，执行if语句");
+  }
+</script>
+</html>

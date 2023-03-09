@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+<script>
+  // object 普通对象
+  var obj = { num: 100, age: 18, 0: 999, hobby: "basketball" };
+  //num:属性名（键/key）
+  // 100：属性值（值/value）
+  //  num: 100 键值对
+  // 属性值可以是任意数据类型，换句话说必须是某一种数据类型
+  // 属性名是能是字符串或者symbol类型
+
+  // 增删改查
+  // 点语法/中括号语法
+  console.log(obj.num); //obj的num
+  var res = obj.age;
+  console.log(res);
+
+  // 中括号一定要带引号
+  console.log(obj["num"]);
+  console.log(obj["age"]);
+  console.log(obj["name"]); //undefined 查找一个不存在的属性名
+
+  console.log(obj);
+  // console.log(obj.0);
+  // 属性名是数字不能用点语法
+  // 中括号语法中，数字随便带不带引号
+  console.log(obj[0]);
+  console.log(obj["0"]);
+
+  // 不带引号是变量，如果没有创建，就会报错 xxx is not defined
+  // obj[age];
+
+  console.log(window, "@@@@");
+  // window.length
+  console.log(obj[length]); //obj[window.length]=>obj[0]
+  console.log(obj[innerHeight], "-----"); //obj[948]
+
+  var obj = {};
+  var theSymble = Symbol("Symbol注释");
+  obj[theSymble] = "属性值";
+  console.log(obj[theSymble]); //'属性值';
+
+  var obj = { name: "name", age: 100 };
+  obj.name = undefined;
+  console.log(obj);
+
+
+</script>

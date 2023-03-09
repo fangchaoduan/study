@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="parent-box">
+        父元素文本节点1
+        <div class="item-box item-box1">子元素文本节点001</div>
+        父元素文本节点2
+        <div class="item-box item-box2">子元素文本节点002</div>
+        父元素文本节点3
+        <div class="item-box item-box3">子元素文本节点003</div>
+        父元素文本节点4
+        <div class="item-box item-box4">子元素文本节点004</div>
+        父元素文本节点5
+        <div class="item-box item-box5">子元素文本节点005</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const parentBox = document.getElementsByClassName("parent-box")[0];
+  function getElements(element) {
+    const childNodes = element.childNodes;
+    const children = [];
+    for (let i = 0; i < childNodes.length; i++) {
+      if (childNodes[i].nodeType === 1) {
+        children.push(childNodes[i]);
+      }
+    }
+    return children;
+  }
+  const children = getElements(parentBox);
+  console.log(children, "子节点集合");
+
+  function getFirstElementChild(element) {
+    const childNodes = element.childNodes;
+    let child = null;
+    for (let i = 0; i < childNodes.length; i++) {
+      if (childNodes[i].nodeType === 1) {
+        child = childNodes[i];
+        return child;
+      }
+    }
+    return child;
+  }
+  const firstElementChild = getFirstElementChild(parentBox);
+  console.log(firstElementChild, "第一个子元素");
+
+  function getLastElementChild(element) {
+    const childNodes = element.childNodes;
+    let child = null;
+    for (let i = childNodes.length - 1; i >= 0; i--) {
+      if (childNodes[i].nodeType === 1) {
+        child = childNodes[i];
+        return child;
+      }
+    }
+    return child;
+  }
+  const lastElementChild = getLastElementChild(parentBox);
+  console.log(lastElementChild, "最后一个子元素");
+
+  const itemChild = parentBox.getElementsByClassName("item-box")[1];
+  console.log(itemChild, "当前元素");
+  function getPreviousElementSibling(child) {
+    let nowNode = child || null;
+    while (nowNode !== null && nowNode !== undefined) {
+      const previousNode = nowNode?.previousSibling;
+      if (previousNode?.nodeType === 1) {
+        return previousNode;
+      }
+      nowNode = previousNode;
+    }
+    return nowNode;
+  }
+  const previousElementSibling = getPreviousElementSibling(itemChild);
+  console.log(previousElementSibling, "上一个兄弟元素");
+
+  function getNextElementSibling(child) {
+    let nowNode = child || null;
+    while (nowNode !== null && nowNode !== undefined) {
+      const nextNode = nowNode?.nextSibling;
+      if (nextNode?.nodeType === 1) {
+        return nextNode;
+      }
+      nowNode = nextNode;
+    }
+    return nowNode;
+  }
+  const nextElementSibling = getNextElementSibling(itemChild);
+  console.log(nextElementSibling, "下一个兄弟元素");
+
+  function getPreviousElement(child) {
+    if (child === null || child === null) {
+      return child;
+    }
+
+    const previousNode = child?.previousSibling;
+    if (previousNode?.nodeType === 1) {
+      return previousNode;
+    }
+
+    return getPreviousElement(previousNode);
+  }
+  const previousElement = getPreviousElement(previousElementSibling);
+  console.log(previousElement, "递归上一个兄弟元素");
+</script>

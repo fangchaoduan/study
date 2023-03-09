@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>8.随机验证码</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script src="">
+  function randomCode(numLength = 4) {
+    const chars = [];
+    for (let i = "0".charCodeAt(); i <= "9".charCodeAt(); i++) {
+      chars.push(i);
+    }
+    for (let i = "a".charCodeAt(); i <= "z".charCodeAt(); i++) {
+      chars.push(i);
+    }
+    for (let i = "A".charCodeAt(); i <= "Z".charCodeAt(); i++) {
+      chars.push(i);
+    }
+    const newList = [];
+    for (; newList.length < numLength; ) {
+      const num = Math.floor(Math.random() * (chars.length - 1 - 0 + 1) + 0);
+      if (!newList.includes(num)) {
+        newList.push(num);
+      }
+    }
+    let res = "";
+    for (let i = 0; i < newList.length; i++) {
+      res = res + String.fromCharCode(chars[newList[i]]);
+    }
+    return res;
+  }
+  console.log(randomCode(4));
+</script>
+
+<script src="">
+  function randomCode(numLength = 4) {
+    const chars = [];
+    for (let i = "0".charCodeAt(); i <= "9".charCodeAt(); i++) {
+      chars.push(String.fromCharCode(i));
+    }
+    for (let i = "a".charCodeAt(); i <= "z".charCodeAt(); i++) {
+      chars.push(String.fromCharCode(i));
+    }
+    for (let i = "A".charCodeAt(); i <= "Z".charCodeAt(); i++) {
+      chars.push(String.fromCharCode(i));
+    }
+
+    const newList = [];
+    for (; newList.length < numLength; ) {
+      const num = Math.floor(Math.random() * (chars.length - 1 - 0 + 1) + 0);
+      if (!newList.includes(chars[num])) {
+        newList.push(chars[num]);
+      }
+    }
+
+    let res = newList.join("");
+    return res;
+  }
+  console.log(randomCode(4));
+</script>
+
+<script>
+  var str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  function randomCode(numLength = 4, string = "0123456789", isRepeat = false) {
+    const chars = string.split("");
+
+    const newList = [];
+    for (; newList.length < numLength; ) {
+      const num = Math.floor(Math.random() * (chars.length - 1 - 0 + 1) + 0);
+      if (isRepeat || !newList.includes(chars[num])) {
+        newList.push(chars[num]);
+      }
+    }
+
+    let res = newList.join("");
+    return res;
+  }
+  console.log(randomCode(4, str));
+</script>

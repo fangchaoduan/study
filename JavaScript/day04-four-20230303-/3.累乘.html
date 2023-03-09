@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function multiply() {
+      // var theArguments = arguments;
+      var total = 1;
+      for (let i = 0; i < arguments.length; i++) {
+        total = total * arguments[i];
+      }
+      return total;
+    }
+    console.log(multiply(10, 20, 30));
+  </script>
+</html>

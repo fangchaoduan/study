@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动态引入js代码并执行</title>
+  </head>
+  <body></body>
+  <script>
+    setTimeout(() => {
+      console.log(1, window.fang);//1 undefined;
+      const script = document.createElement("script");
+      script.src = "./动态js文件.js";
+      document.body.appendChild(script);
+      console.log(2, window.fang);//2 undefined;
+    }, 0);
+    setTimeout(() => {
+      console.log(3, fang);//{fang: '方一'};
+    }, 3000);
+  </script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+
+
+    var a = {
+      n: 1,
+    };
+    var b = a;
+    //a.x = { n: 2, };a = { n: 2 }//优先级
+    //感觉这个可能还是
+    //开辟了a.x; a = { n: 2 }; a.x之前所在的内存地址 = a;
+    a.x = a = {
+      n: 2,
+    };
+    console.log(a.x);//undefined
+    console.log(b);//{n:1,x:{n:2}}
+    a.n = 3
+    console.log(a)//{n:3}
+    console.log(b)//{n:1,x:{n:2}}
+  </script>
+</html>
