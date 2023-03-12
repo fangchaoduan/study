@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box">box</div>
+  </body>
+</html>
+
+<script>
+  //创建一个元素节点
+  var elementNode = document.createElement("div");
+  console.dir(elementNode);
+  //创建一个文本节点
+  var textNode = document.createTextNode("文本节点");
+  console.dir(textNode);
+
+  //将新目标节点插入到父元素的末尾
+  const box = document.getElementsByClassName("box")[0];
+  box.appendChild(elementNode);
+  box.appendChild(textNode);
+
+  //在于父元素中的后方参照节点前面插入新目标节点
+  //1.获取到父节点;
+  const parentNode = document.getElementsByClassName("box")[0];
+  //2.获取到后方参照节点;
+  const beforeNode = elementNode;
+  //3.创建p节点;
+  const element1 = document.createElement("p");
+  //4.创建文本节点;
+  const text1 = document.createTextNode("p Text");
+  // 5.将文本节点放到p标签里面
+  element1.appendChild(text1);
+  //6.p节点插入到div节点前面
+  parentNode.insertBefore(element1, beforeNode);// 父节点.insertBefore(新节点，参照的节点)
+</script>

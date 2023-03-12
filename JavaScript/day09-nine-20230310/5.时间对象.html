@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script>
+  const date = new Date();
+  console.log(date, "当前时间");
+  const dateType = typeof new Date();
+  console.log(dateType, "时间对象的类型"); //'object'
+
+  const dateObject = new Date(
+    "Sat Jul 09 2022 01:02:03 GMT+0800 (中国标准时间)"
+  );
+  console.log([dateObject]); //"Sat Jul 09 2022 01:02:03 GMT+0800 (中国标准时间)";//因为调用toString()隐式转化了。
+  // console.dir(dateObject)//可以看到它就是一个对象。
+
+  console.log(dateObject.getFullYear()); //2022
+  console.log(dateObject.getMonth()); //6
+  console.log(dateObject.getDate()); //9
+
+  console.log(dateObject.getDay()); //6 [0,6] [周日 到 周一 到 周六]
+
+  console.log(dateObject.getHours()); //1
+  console.log(dateObject.getMinutes()); //2
+  console.log(dateObject.getSeconds()); //3
+  console.log(dateObject.getMilliseconds()); //0
+
+  console.log(dateObject.getTime()); //1657299723000
+  console.log(dateObject.toLocaleString()); //2022/7/9 01:02:03
+  console.log(dateObject.toLocaleDateString()); //2022/7/9
+  console.log(dateObject.toLocaleTimeString()); //01:02:03
+</script>

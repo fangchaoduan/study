@@ -10,5 +10,21 @@
 </html>
 
 <script>
+  // document.documentElement
   
+  function sum(){
+    const ary = arguments
+    let res =0
+    for(let i=0;i<ary.length;i++){
+      const now = Number(ary[i])
+      if(now!==now){
+        continue
+      }
+
+      res+=now
+    }
+    return res
+  }
+
+  sum(1,2,3,'p','4')//10
 </script>

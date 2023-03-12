@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <div>1111</div>
+  </ul>
+  <script>
+    // @1 创建元素
+    var ele = document.createElement('div');
+    // @2 创建一个文本节点
+    var textNode = document.createTextNode('111');
+
+    // @3 怎么将某个节点插入到某个元素的末尾
+    var bEle = document.body;
+    // bEle.appendChild(textNode);//在body末尾加了一个textNode（文本节点）
+
+    // @4 在某个节点前面插入新节点 （在div前面插入p节点，p节点里面有文本）
+    // 1.获取到父节点
+    var ulNode = document.getElementsByTagName('ul')[0];
+    // 2.获取到div节点
+    var divNode = document.getElementsByTagName('div')[0];
+    // 3.创建p节点
+    var pElementNode = document.createElement('p');
+    // 4.创建文本节点
+    var textNode = document.createTextNode('0000');
+    // 5.将文本节点放到p标签里面
+    pElementNode.appendChild(textNode);
+    console.log(pElementNode);
+    // 6.p节点插入到div节点前面
+    // 父节点.insertBefore(新节点，参照的节点)
+    ulNode.insertBefore(pElementNode, divNode)
+  </script>
+</body>
+
+</html>

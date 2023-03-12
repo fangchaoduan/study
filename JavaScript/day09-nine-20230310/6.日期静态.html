@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script>
+  function getTimeString() {
+    function addZero(num) {
+      return num > 9 ? num : `0${num}`;
+    }
+    const time = new Date();
+    const year = time.getFullYear();
+    const month = time.getMonth() + 1;
+    const date = time.getDate();
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+    const seconds = time.getSeconds();
+    const milliseconds = time.getMilliseconds();
+
+    const weekIndex = time.getDay();
+    const weeksList = ["日", "一", "二", "三", "四", "五", "六"];
+    const day = weeksList[weekIndex];
+    const nowTime = `${addZero(year)}年${addZero(month)}月${addZero(
+      date
+    )}日 ${addZero(hours)}时${addZero(minutes)}分${addZero(
+      seconds
+    )}秒${addZero(milliseconds)} 周${day}`;
+    return nowTime;
+  }
+
+  const box = document.getElementsByClassName("box")[0];
+  box.innerText = getTimeString();
+</script>

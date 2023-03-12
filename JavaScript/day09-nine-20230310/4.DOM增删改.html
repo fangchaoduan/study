@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box" name="fang">
+      box原生内容
+      <p class="item">box原生子元素</p>
+    </div>
+  </body>
+</html>
+
+<script>
+  const box = document.getElementsByClassName("box")[0];
+  const shallowCloning = box.cloneNode();
+  console.log(shallowCloning,'默认浅克隆');
+  const deepCloning = box.cloneNode(true);
+  console.log(deepCloning,'传了true，就是深克隆');
+
+  const item = document.getElementsByClassName("item")[0];
+  const parentNode = document.getElementsByClassName("box")[0];
+  parentNode.removeChild(item)
+
+  const targetElement = document.getElementsByClassName('box')[0]
+  const attributeValue = targetElement.getAttribute('class')
+  console.log(attributeValue,'获取的是对应属性的属性值')
+  const idAttribute = targetElement.getAttribute('id')
+  console.log(idAttribute,'不存在的属性是null')
+  targetElement.setAttribute('fang1','fangtofang1')
+  // targetElement.setAttribute('fang2')//报错 必须要有两个参数
+  // targetElement.removeAttribute('name')
+  console.log([targetElement],'setAttribute只是设置在标签上，对应对象上并没有设置')
+  console.log(targetElement.fang1,'中括号语法拿不到用setAttribute()设置的自定义属性')
+
+  const elementObject = document.getElementsByClassName('box')[0]
+  elementObject.fang3 = 'fangtofang3'
+  const fang3 = elementObject.fang3
+  elementObject.fang3 = 'fang'
+  elementObject.fang4 = 'fangtofang4'
+  delete elementObject.fang4
+  console.dir(elementObject)
+</script>

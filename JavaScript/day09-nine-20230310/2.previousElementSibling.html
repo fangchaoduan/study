@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box">
+      <!-- comment1 -->
+      <div>01</div>
+      <!-- comment2  -->
+      <div class="current">02</div>
+
+      <!-- comment3  -->
+      <div>03</div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function previousElementSibling(element) {
+    let ele = element?.previousSibling;
+    while (ele && ele.nodeType !== 1) {
+      ele = ele.previousSibling;
+    }
+    return ele;
+  }
+  const element = document.getElementsByClassName("current")[0];
+  console.log(previousElementSibling(element));
+
+
+  // const box = document.getElementsByClassName('box')[0]
+
+  const current = document.getElementsByClassName('current')[0]
+  console.log(current.parentNode)
+  console.log(current.childNodes)
+</script>

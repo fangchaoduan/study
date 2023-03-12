@@ -197,7 +197,7 @@
   2. 通过类名 `document.getElementsByClassName('box')`
       - Elements=>带s的都是数组集合（伪数组）
   3. 通过标签名 `document.getElementsByTagName('input')`
-  4. 通过name属性 `document.getElementsByTagName('sexText')`
+  4. 通过name属性 `document.getElementsByName('sexText')`
       - 建议只在input标签使用name属性
   5. 通过选择器获取
       - 获取单个 `document.querySelector('div+input')`

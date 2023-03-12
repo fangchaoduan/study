@@ -10,5 +10,175 @@
 </html>
 
 <script>
-  
+  const array = [1, 2, 3, 5, 5, -1, -2, -9, -1, 8, 7, 1, 0, 1, 2, 5, 4, 87];
+  console.log(array);
+
+  console.time("1");
+  const mySort1 = (ary = []) => {
+    for (let i = 0; i < ary.length - 1; i++) {
+      for (let j = i + 1; j < ary.length; j++) {
+        if (ary[i] > ary[j]) {
+          const item = ary[i];
+          ary[i] = ary[j];
+          ary[j] = item;
+        }
+      }
+    }
+    return ary;
+  };
+  console.log(mySort1(array.slice()), "冒泡排序");
+  console.timeEnd("1");
+
+  console.time("2");
+  const mySort2 = (ary = []) => {
+    if (ary.length <= 1) {
+      return ary;
+    }
+
+    const res = [ary[0]];
+    for (let i = 0 + 1; i < ary.length; i++) {
+      const getItem = ary[i];
+      for (let j = res.length - 1; j >= 0; j--) {
+        if (getItem > res[j]) {
+          res.splice(j + 1, 0, getItem);
+          break;
+        }
+
+        if (j === 0) {
+          res.splice(0, 0, getItem);
+          break;
+        }
+      }
+    }
+    return res;
+  };
+  console.log(mySort2(array.slice()), "插入排序");
+  console.timeEnd("2");
+
+  console.time("3");
+  const mySort3 = (ary = []) => {
+    if (ary.length <= 1) {
+      return ary;
+    }
+
+    const centerIndex = Math.floor(ary.length / 2);
+    const centerItem = ary.splice(centerIndex, 1)[0];
+    const minArray = [];
+    const maxArray = [];
+    for (let i = 0; i < ary.length; i++) {
+      const getItem = ary[i];
+      if (getItem < centerItem) {
+        minArray.push(getItem);
+      } else {
+        maxArray.push(getItem);
+      }
+    }
+    // return mySort3(minArray).concat(centerItem).concat(mySort3(maxArray));
+    return [...mySort3(minArray), centerItem, ...mySort3(maxArray)];
+  };
+  console.log(mySort3(array.slice()), "快速排序");
+  console.timeEnd("3");
+
+  console.time("4");
+  const fang = [0, -2, -3, -9, 1, 2, 3, 6, 999999999999, 888, 888, 7, 7];
+  const mySort4 = (ary = []) => {
+    const res = [];
+
+    for (let i = 0; i < ary.length; i++) {
+      const index = ary[i];
+      if (res[index] === undefined) {
+        res[index] = 1;
+      } else {
+        res[index]++;
+      }
+    }
+
+    const result = [];
+    for (let key in res) {
+      // console.log("key--->", key);
+      for (let i = 0; i < res[key]; i++) {
+        result.push(Number(key));
+      }
+    }
+    return result;
+  };
+  console.log(
+    mySort4(array.slice()),
+    "数组角标加for-in排序-有问题，不能负数，不能字符串"
+  );
+  // console.log(mySort4(fang), "数组角标加for-in排序");
+  console.timeEnd("4");
+
+  console.time("5");
+  const handerRepeat1 = (ary = []) => {
+    for (let i = 0; i < ary.length; i++) {
+      const getItem = ary[i];
+      for (let j = i + 1; j < ary.length; j++) {
+        if (getItem === ary[j]) {
+          ary.splice(j, 1);
+          j--;
+          continue;
+        }
+      }
+    }
+    return ary;
+  };
+  console.log(
+    handerRepeat1(array.slice()).sort((a, b) => a - b),
+    "利用全等操作符===去重"
+  );
+  console.timeEnd("5");
+
+  console.time("6");
+  const handerRepeat2 = (ary = []) => {
+    const obj = Object.create(null);
+    for (let i = 0; i < ary.length; i++) {
+      const getItem = ary[i];
+      if (obj[getItem] === undefined) {
+        obj[getItem] = i;
+        continue;
+      }
+
+      ary[i] = ary[ary.length - 1];
+      ary.length--;
+      i--;
+    }
+    return ary;
+  };
+  console.log(
+    handerRepeat2(array.slice()).sort((a, b) => a - b),
+    "利用对象属性唯一性去重"
+  );
+  console.timeEnd("6");
+
+  console.time("7");
+  const handerRepeat3 = (ary = []) => {
+    for (let i = 0; i < ary.length; i++) {
+      const getItem = ary[i];
+      if (ary.indexOf(getItem, i + 1) === -1) {
+        continue;
+      }
+
+      ary[i] = ary[ary.length - 1];
+      ary.length--;
+      i--;
+    }
+    return ary;
+  };
+  console.log(
+    handerRepeat3(array.slice()).sort((a, b) => a - b),
+    "利用includes()及indexOf()等方法去重"
+  );
+  console.timeEnd("7");
+
+  console.time("8");
+  const handerRepeat4 = (ary = []) => {
+    const res = [...new Set(ary)];
+    return res;
+  };
+  console.log(
+    handerRepeat4(array.slice()).sort((a, b) => a - b),
+    "利用new Set()方法去重"
+  );
+  console.timeEnd("8");
 </script>

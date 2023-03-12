@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //排序1
+    var ary = [1, 3, 5, 2, 4, 6];
+    function a(ary) {
+      for (var i = 0; i < ary.length - 1; i++) {
+        for (var j = 0; j < ary.length - 1 - i; j++) {
+          var b = ary[j];
+          var c = ary[j + 1];
+          if (ary[j] > ary[j + 1]) {
+            var d = ary[i];
+            ary[j] = ary[j + 1];
+            ary[j + 1] = d;
+          }
+        }
+      }
+      return ary;
+    }
+    var ary = [1, 3, 5, 2, 4, 6];
+    var res = a(ary);
+    console.log(res);
+    //////////////////////////////
+    //   去重1：
+    var ary = [1, 3, 1, 2, 1, 6];
+    function nan(ary) {
+      var newary = [];
+      for (var i = 0; i < ary.length; i++) {
+        if (newary.indexOf(ary[i]) == -1) {
+          newary.push(ary[i]);
+        }
+      }
+      return newary;
+    }
+    console.log(nan(ary));
+    //////////////////////////////
+    //   去重2;
+    var ary = [1, 3, 1, 2, 1, 6];
+    function nan(ary) {
+      for (var i = 0; i < ary.length - 1; i++) {
+        var a = ary[i];
+        for (var j = i + 1; j < ary.length; j++) {
+          var b = ary[j];
+          if (a == b) {
+            ary.splice(j, 1);
+          }
+        }
+      }
+      return ary;
+    }
+    console.log(nan(ary));
+  </script>
+</body>
+</html>

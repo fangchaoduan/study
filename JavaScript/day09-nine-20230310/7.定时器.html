@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+
+<script>
+  // setInterval(function(){},1000)
+  const timer1 = setInterval(() => {
+    console.log("setInterval()，每过一次时间间隔就执行一次", 1);
+  }, 1000);
+
+  const timer2 = setTimeout(() => {
+    console.log("setTimeout()，第一次时间执行一次，之后都不再执行", 1);
+  }, 1000);
+
+  console.log("timer1--->", timer1);
+  clearInterval(timer1);
+  console.log("timer2--->", timer2);
+  clearTimeout(timer2);
+</script>

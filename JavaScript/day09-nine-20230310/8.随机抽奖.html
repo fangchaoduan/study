@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>复习</title>
+  </head>
+  <body>
+    <div class="box" name="fang"></div>
+  </body>
+</html>
+
+<script>
+  const fang = document.getElementsByName("fang")[0];
+  console.log(fang);
+  function getRandomString(max = 4) {
+    let res = "";
+    for (let i = 0; i < max; i++) {
+      res += Math.floor(Math.random() * (10 - 0) + 0);
+    }
+    return res;
+  }
+
+  const box = document.getElementsByClassName("box")[0];
+  box.innerText = getRandomString();
+  const time = 1000;
+  const timer1 = setInterval(() => {
+    box.innerText = getRandomString();
+  }, time);
+  setTimeout(() => {
+    clearInterval(timer1);
+  }, 10 * time);
+</script>

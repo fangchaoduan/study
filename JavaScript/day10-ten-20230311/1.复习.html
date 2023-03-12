@@ -9,6 +9,80 @@
   </body>
 </html>
 
+<script src="">
+  var num; //undefined
+  num = 100;
+  //在函数外面声明的变量，在外面和函数里面都可以用
+  //形参和在函数里面声明的变量，只有里面才可以用
+  (100.3).toFixed;
+</script>
+<script src="">
+  var obj = {
+    age: 18,
+  };
+  obj.age;
+  obj["age"];
+
+  var age = 19;
+
+  var ary = [1, true, null, undefined, { a: 1 }, [], () => {}]; //将基本数据类型放到一个新数组里面
+  var res = [];
+  for (let i = 0; i < ary.length; i++) {
+    if (
+      ary[i] === null ||
+      (typeof ary[i] !== "object" && typeof ary[i] !== "function")
+    ) {
+      res.push(ary[i]);
+    }
+  }
+  console.log(res);
+  res2 = ary.map((item) =>
+    item === null || typeof item !== "object" ? item : null
+  );
+
+  function map(theArray = [], callback = () => {}) {
+    const res = [];
+    for (let i = 0; i < theArray.length; i++) {
+      const item = theArray[i];
+      const index = i;
+      const selfArray = theArray;
+      const callbackReturn = callback(item, index, selfArray);
+      res[res.length] = callbackReturn;
+    }
+    return res;
+  }
+</script>
+<script src="">
+  var objectDeweight = (ary = []) => {
+    const obj = Object.create(null);
+    for (let i = 0; i < ary.length; i++) {
+      if (ary[i] in obj) {
+        ary[i] = ary[ary.length - 1];
+        ary.length--;
+        i--;
+        continue;
+      }
+
+      obj[ary[i]] = i;
+    }
+    return ary;
+  };
+  console.log(objectDeweight([6, 0, 1, 2, 3, undefined, null, 6, 5, 5, 1, 1]));
+</script>
 <script>
-  
+  var objectDeweight = (ary = []) => {
+    const obj = Object.create(null);
+    for (let i = 0; i < ary.length; i++) {
+      if (obj[ary[i]] !== undefined) {
+        ary[i] = ary[ary.length - 1];
+        ary.length--;
+        i--;
+        continue;
+      }
+
+      obj[ary[i]] = i;
+    }
+    return ary;
+  };
+  console.log(objectDeweight([6, 0, 1, 2, 3, undefined, null, 6, 5, 5, 1, 1]));
 </script>

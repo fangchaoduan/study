@@ -9,105 +9,76 @@
 </head>
 
 <body>
+  <ul>
+    <!-- 注释 -->
+    <li name="user" id="eleLi">111</li>
+    <li>222</li>
+    <li>222</li>
+    <li>222</li>
+    <li>222</li>
+  </ul>
   <script src="">
-    var ary = [10, 20, 30];
-    // push  在数组末尾加元素
-    // var res = ary.push(40);//4
-    // pop  删除最后一项
-    // var res = ary.pop();//30
-    // shift  删除第一项
-    // var res = ary.shift();//10
-    // unshift
-    // var res = ary.unshift(10, 20, 30);//6
-    // reverse
-    // var res = ary.reverse();//[30,20,10]
-    // sort
-    // var res = ary.sort(function (a, b) { return a - b });//升序
-    // var res = ary.sort(function (a, b) { return b - a });//降序
-    // splice 
-    /* 
-    第一个参数：开始的位置
-    第二个参数：删除的个数
-    第三个参数：新增的元素
-    */
-    // var res = ary.splice();//[]
-    // var res = ary.splice(1);//[20,30]
-    // var res = ary.splice(1, 1);//[20]
-    // var res = ary.splice(1, 1, 11);//[20]   [10,11,30]
+    // 如何获取元素？
+    // @1 通过id获取
+    document.getElementById('box');
+    // @2 通过类名
+    document.getElementsByClassName('box');
+    // @3 通过标签名
+    document.getElementsByTagName('div');
+    // @4 通过name
+    document.getElementsByName('user');
+    // @5 选择器
+    document.querySelector('.box');
+    document.querySelectorAll('.box');
+    // @6 获取html/body/head
+    document.documentElement;//html
+    document.body;//body
+    document.head;//head
 
-    // slice
+    // 如何获取一屏幕的宽高
+    document.documentElement.clientWidth || document.body.clientWidth;
+    document.documentElement.clientHeight || document.body.clientHeight;
+  </script>
+  <script src="">
     /* 
-    第一个参数：开始的位置
-    第二个参数：结束的位置（不包含）
+    + 元素节点
+      + 节点名称  ->大写的标签名
+      + 节点类型  ->1
+      + 节点值    ->null
+    + 属性节点
+      + 节点名称  ->'属性名'
+      + 节点类型  ->2
+      + 节点值    ->'属性值'
+    + 文本节点
+      + 节点名称  ->#text
+      + 节点类型  ->3
+      + 节点值    ->'文本内容'
+    + 注释节点
+      + 节点名称  ->#comment
+      + 节点类型  ->8
+      + 节点值    ->'注释内容'
+    + 文档节点
+      + 节点名称  ->#document
+      + 节点类型  ->9
+      + 节点值    ->null
     */
-    // var res = ary.slice();//全部截取
-    // var res = ary.slice(1);//从下标为1开始全部截取
-    // var res = ary.slice(1, 2);//从下标为1开始,截取到下标为2（不包含）
-    // indexOf  第一次出现的位置
-    /* 
-    第一个参数：查找的元素
-    第二个参数：开始查找的位置
-    */
-    // var res = ary.indexOf(10);//0
-    // var res = ary.indexOf(10, 2);//-1
-    // lastIndexOf
+    console.log(eleLi.getAttributeNode('name').nodeName);
+    // 节点 VS 元素节点
+  </script>
+  <script>
     /*
-    第一个参数：查找的元素
-    第二个元素：停止查找的位置
+    + 父节点（只可能是元素节点） parentNode
+    + 子节点 childNodes
+    + 子元素节点 children
+    + 第一个子节点 firstChild
+    + 第一个子元素节点 firstElementChild
+    + 最后一个子节点  lastChild
+    + 最后一个子元素节点 lastElementChild
+    + 上一个兄弟节点  previousSibling
+    + 上一个兄弟元素节点 previousElementSibling
+    + 下一个兄弟节点 nextSibling
+    + 下一个兄弟元素节点 nextElementSibling
     */
-    // var res = ary.lastIndexOf(10, 2);
-    // join
-    // var res = ary.join('|');//'10|20|30'
-    // concat
-    // [100, 200].concat(10, [20, 30]);//[100,200,10,20,30]
-    // includes
-    // var res = ary.includes(10);//true
-
-    // forEach 没有返回值
-    ary.forEach(function (item, index) {
-      console.log(item, index);
-    })
-    // map
-  </script>
-
-  <script>
-    var str = 'zhufengpeixun';
-    // charAt
-    var res = str.charAt(0);//'z'
-    // charCodeAt
-    var res = str.charCodeAt(0);//122
-
-    console.log('----------------');
-    // slice
-    // subString
-    // substr
-    /* 
-    slice&subString
-      + slice可以有负数索引，sunString是没有的
-    slice&substr
-      + 可以是负数索引，但是第二个参数是个数的意思
-    */
-    console.log('----------------');
-
-    // indexOf
-    // lastIndexOf
-    // split 用字符串中已有字符去分割 ‘1-2-3’ [1,2,3]
-    // toUpperCase
-    // toLowerCase
-    // replace
-
-  </script>
-  <script>
-    // abs 
-    // ceil
-    // floor
-    // round
-    // max
-    // min
-    // PI
-    // sqrt
-    // pow
-    // random
   </script>
 </body>
 
